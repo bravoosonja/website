@@ -1,27 +1,13 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
-export const MouseContext = createContext({
-  cursorType: "",
-  cursorChangeHandler: () => {},
-});
+export const CursorContext = createContext();
 
-const MouseContextProvider = (props) => {
-  const [cursorType, setCursorType] = useState("");
-
-  const cursorChangeHandler = (cursorType) => {
-    setCursorType(cursorType);
-  };
+export default function CursorContextProvider() {
+  const [cursor, setCursor] = useState({ active: false });
 
   return (
-    <MouseContextProvider>
-      value=
-      {{
-        cursorType: cursorType,
-        cursorChangeHandler: cursorChangeHandler,
-      }}
-      {props.children}
-    </MouseContextProvider>
+    <CursorContext.Provider value={[cursor, setCursor]}>
+      {(cursor, setCursor)}
+    </CursorContext.Provider>
   );
-};
-
-export default MouseContextProvider;
+}

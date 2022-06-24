@@ -3,9 +3,11 @@ import Header from "../components/header";
 import CustomCursor from "../components/feature/customCursor";
 // context
 import { MouseContext } from "../contexts/mouse-context";
+// hook
+import useMousePosition from "../hooks/useMousePosition";
 
 export default function Home() {
-  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+  const { cursor, cursorChangeHandler } = useContext(MouseContext);
   return (
     <>
       <CustomCursor />

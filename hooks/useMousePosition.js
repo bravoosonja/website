@@ -4,9 +4,8 @@ export default function useMousePosition() {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
   useEffect(() => {
-    const mouseMoveHandler = (event) => {
-      const { clientX, clientY } = event;
-      setMousePosition({ x: clientX, y: clientY });
+    const mouseMoveHandler = (e) => {
+      setMousePosition({ x: e.pageX, y: e.pageY });
     };
 
     document.addEventListener("mousemove", mouseMoveHandler);
