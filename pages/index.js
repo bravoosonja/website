@@ -1,16 +1,26 @@
 // components
 import Header from "../components/header";
+import CustomCursor from "../components/feature/customCursor";
+// context
+import { MouseContext } from "../contexts/mouse-context";
 
 export default function Home() {
+  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   return (
     <>
+      <CustomCursor />
       <Header />
-      <h1>AESTHETICS</h1>
-      <h2>H2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
+      <div
+        onMouseEnter={() => cursorChangeHandler("hovered")}
+        onMouseLeave={() => cursorChangeHandler("")}
+      >
+        <h1>AESTHETICS</h1>
+        <h2>H2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+      </div>
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it
