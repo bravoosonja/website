@@ -1,21 +1,7 @@
-// components
-import Header from "../components/header";
-import CustomCursor from "../components/feature/customCursor";
-// context
-import { MouseContext } from "../contexts/mouse-context";
-// hook
-import useMousePosition from "../hooks/useMousePosition";
-
 export default function Home() {
-  const { cursor, cursorChangeHandler } = useContext(MouseContext);
   return (
     <>
-      <CustomCursor />
-      <Header />
-      <div
-        onMouseEnter={() => cursorChangeHandler("hovered")}
-        onMouseLeave={() => cursorChangeHandler("")}
-      >
+      <div>
         <h1>AESTHETICS</h1>
         <h2>H2</h2>
         <h3>Heading 3</h3>

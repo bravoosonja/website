@@ -1,8 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
     }
 
     * {
@@ -10,10 +11,11 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         cursor: none;
+        text-decoration: none;
     }
 
     body {
-        background-color: "#F5F5F5";
+        background: ${(props) => props.theme.background};
         padding: 2rem;
         width: 100%;
         font-family: 'Mier', "MurMure", sans-serif;
@@ -21,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
     h1,h2,h3,h4,h5,h6 {
         font-family: 'MurMure';
-        color: "#0A0A0A";
+        color: ${(props) => props.theme.text};
         text-transform: uppercase;
     }
 
@@ -52,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
     p {
         font-size: 20px;
         font-family: 'Mier';
-        color: "#0A0A0A";
+        ${(props) => props.theme.text};
     };
 
     a {
@@ -65,5 +67,3 @@ const GlobalStyle = createGlobalStyle`
     }
     
 `;
-
-export default GlobalStyle;
