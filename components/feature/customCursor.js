@@ -1,11 +1,11 @@
-import { useEffect, useState, useRef } from "react";
-//Context
-import { useGlobalStateContext } from "../../context/globalContext";
+import { useEffect, useRef, useContext } from "react";
+//context
+import { CursorContext } from "../../context/globalContext";
 // Styled Components
 import styled from "styled-components";
 
 const CustomCursor = ({ toggleMenu }) => {
-  const { cursorType } = useGlobalStateContext();
+  const cursorType = useContext(CursorContext);
   const cursor = useRef(null);
 
   const onMouseMove = (event) => {

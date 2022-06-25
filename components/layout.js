@@ -1,29 +1,22 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 // components
 import Header from "../components/header";
 import CustomCursor from "./feature/customCursor";
 //context
 import {
-  useGlobalStateContext,
-  useGlobalDispatchContext,
+  CursorContext,
+  cursorStyles,
+  ThemeContext,
+  themes,
 } from "../context/globalContext";
-import { GlobalStyle, ThemeProvider } from "styled-components";
+import { GlobalStyle } from "styled-components";
 
 export default function Layout({ children }) {
-  const darkTheme = {
-    background: "#0A0A0A",
-    text: "#F5F5F5",
-  };
-
-  const lightTheme = {
-    background: "#0A0A0A",
-    text: "#F5F5F5",
-  };
-
-  const { currentTheme, cursorStyles } = useGlobalStateContext();
-  const dispatch = useGlobalDispatchContext();
+  // const { currentTheme, cursorType } = useGlobalStateContext();
+  // const dispatch = useGlobalDispatchContext();
 
   const [toggleMenu, setToggleMenu] = useState(false);
+  // const [state, dispatch] = useReducer(reducer, initialStates, init);
 
   const onCursor = (cursorType) => {
     cursorType = (cursorStyles.includes(cursorType) && cursorType) || false;
@@ -31,11 +24,10 @@ export default function Layout({ children }) {
   };
 
   return (
-    <ThemeProvider theme={currentTheme === "light" ? darkTheme : lightTheme}>
-      <GlobalStyle />
+    <>
       <CustomCursor toggleMenu={toggleMenu} />
       <Header onCursor={onCursor} toggleMenu={toggleMenu} />
       <main>{children}</main>
-    </ThemeProvider>
+    </>
   );
 }
