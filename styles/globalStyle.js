@@ -4,12 +4,14 @@ export const lightTheme = {
   text: "#0A0A0A",
   background: "#F5F5F5",
   accent: "#ff006e",
+  secondary: "#9655ff",
 };
 
 export const darkTheme = {
   text: "#F5F5F5",
   background: "#0A0A0A",
   accent: "#35ff69",
+  secondary: "ff006e",
 };
 
 export const GlobalStyle = createGlobalStyle`
@@ -84,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${(props) => props.theme.text};
 
         &:hover {
-            color: ${(props) => props.theme.text};
+            color: ${(props) => props.theme.secondary};
         }      
     }
 

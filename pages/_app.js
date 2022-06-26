@@ -37,8 +37,7 @@ const ThemeContainer = styled.div`
 
   &:hover {
     text-decoration: underline;
-    background-color: ${({ theme }) => theme.text};
-    color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.secondary};
   }
 `;
 
