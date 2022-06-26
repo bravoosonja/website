@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { CgMenu } from "react-icons/cg";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <Wrapper>
       <Name>My Name</Name>
@@ -26,9 +26,15 @@ const Wrapper = styled.div`
 
 const Name = styled.div`
   background-color: transparent;
+  color: ${(props) => props.theme.text};
+  font-size: 1.3rem;
 `;
 
 const StyledMenu = styled.div`
   background-color: transparent;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${(props) => props.theme.text};
 `;

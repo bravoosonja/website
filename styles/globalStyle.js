@@ -1,5 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
+export const lightTheme = {
+  text: "#0A0A0A",
+  background: "#F5F5F5",
+};
+
+export const darkTheme = {
+  text: "#F5F5F5",
+  background: "#0A0A0A",
+};
+
 export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
@@ -10,21 +20,22 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        cursor: none;
         text-decoration: none;
     }
 
     body {
-        background: ${(props) => props.theme.background};
+        background:${(props) => props.theme.background};
         padding: 2rem;
-        width: 100%;
+        width: 100vw;
         font-family: 'Mier', "MurMure", sans-serif;
+        transition: all 0.25s linear;
     }
 
     h1,h2,h3,h4,h5,h6 {
         font-family: 'MurMure';
-        color: ${(props) => props.theme.text};
+        color:  ${(props) => props.theme.text};
         text-transform: uppercase;
+      
     }
 
     h1 {
@@ -54,16 +65,27 @@ export const GlobalStyle = createGlobalStyle`
     p {
         font-size: 20px;
         font-family: 'Mier';
-        ${(props) => props.theme.text};
+        color: ${(props) => props.theme.text};
+       
+       
     };
 
     a {
         text-decoration: none;
+       
     }
 
     img {
         width: 100%;
         display: block;
+       
+    }
+
+    button {
+        font-size:100%;
+        font-family: inherit;
+        border:0;
+        padding:0;
     }
     
 `;

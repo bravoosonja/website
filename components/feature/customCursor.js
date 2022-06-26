@@ -1,11 +1,7 @@
-import { useEffect, useRef, useContext } from "react";
-//context
-import { CursorContext } from "../../context/globalContext";
-// Styled Components
+import { useRef, useEffect } from "react";
 import styled from "styled-components";
 
-const CustomCursor = ({ toggleMenu }) => {
-  const cursorType = useContext(CursorContext);
+const CustomCursor = () => {
   const cursor = useRef(null);
 
   const onMouseMove = (event) => {
@@ -20,38 +16,33 @@ const CustomCursor = ({ toggleMenu }) => {
       document.removeEventListener("mousemove", onMouseMove);
     };
   }, []);
+
   return (
     <>
-      <Cursor
-        className={`${!!cursorType ? "hovered" : ""} ${cursorType} ${
-          toggleMenu ? "nav-open" : ""
-        }`}
-        ref={cursor}
-      />
+      <Cursor ref={cursor} />
     </>
   );
 };
 
 const Cursor = styled.div`
-  background-color: black;
-  height: 50px;
-  width: 50px;
+  background-color: ${(props) => props.theme.text};
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
-  mix-blend-mode: difference;
   transition: 0.5s cubic-bezier(0.75, -1.17, 0.3, 2.33) transform 0.2s
-    cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-  z-index: 1000;
+    cubic-bezier(0.75, -1.27, 0.3, 2.33);
+  z-index: 1;
 
   &.hovered {
     content: "See More";
     font-family: "Murmure";
     font-size: 1rem;
     transition: 0.5s cubic-bezier(0.75, -1.17, 0.3, 2.33) transform 0.2s
-      cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+      cubic-bezier(0.75, -1.27, 0.3, 2.33);
   }
 `;
 
