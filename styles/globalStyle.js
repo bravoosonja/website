@@ -28,7 +28,9 @@ export const GlobalStyle = createGlobalStyle`
         padding: 2rem;
         width: 100vw;
         font-family: 'Mier', "MurMure", sans-serif;
-        transition: all 0.25s linear;
+        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+       
+
     }
 
     h1,h2,h3,h4,h5,h6 {
@@ -68,10 +70,16 @@ export const GlobalStyle = createGlobalStyle`
         color: ${(props) => props.theme.text};
        
        
-    };
+    }
+
+    ul,li {
+        list-style: none;
+        color: ${(props) => props.theme.text};
+    }
 
     a {
         text-decoration: none;
+        color: ${(props) => props.theme.text};
        
     }
 

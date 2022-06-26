@@ -6,8 +6,10 @@ const CustomCursor = () => {
 
   const onMouseMove = (event) => {
     const { clientX, clientY } = event;
-    cursor.current.style.left = `${clientX}px`;
-    cursor.current.style.top = `${clientY}px`;
+    const x = clientX - 75;
+    const y = clientY - 75;
+    cursor.current.style.left = `${x}px`;
+    cursor.current.style.top = `${y}px`;
   };
 
   useEffect(() => {
@@ -36,6 +38,7 @@ const Cursor = styled.div`
   transition: 0.5s cubic-bezier(0.75, -1.17, 0.3, 2.33) transform 0.2s
     cubic-bezier(0.75, -1.27, 0.3, 2.33);
   z-index: 1;
+  opacity: 70%;
 
   &.hovered {
     content: "See More";

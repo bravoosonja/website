@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { CgMenu } from "react-icons/cg";
+import Menu from "./menu/menu";
 
 export default function Header(props) {
   return (
@@ -8,6 +9,7 @@ export default function Header(props) {
       <StyledMenu>
         <CgMenu />
       </StyledMenu>
+      <Menu />
     </Wrapper>
   );
 }
@@ -34,7 +36,7 @@ const StyledMenu = styled.div`
   background-color: transparent;
   font-size: 1.7rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   color: ${(props) => props.theme.text};
 `;

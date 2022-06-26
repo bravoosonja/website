@@ -32,7 +32,8 @@ const ThemeContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: ${({ theme }) => theme.text};
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
+  width: full;
 
   &:hover {
     text-decoration: underline;
