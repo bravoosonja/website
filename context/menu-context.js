@@ -1,8 +1,8 @@
-import { createContext } from "react";
+// import { createContext } from "react";
 
-const MenuContext = createContext({
-  toggleMenu: false,
-  setToggleMenu: () => {},
-});
+// const MenuContext = createContext({
+//   toggleMenu: false,
+//   setToggleMenu: () => {},
+// });
 
-export default MenuContext;
+// export default MenuContext;
