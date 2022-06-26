@@ -19,8 +19,8 @@ export default function IndexPage() {
       </Head>
       <CustomCursor />
 
-      <Header setToggleMenu={setToggleMenu} />
       <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+      <Header setToggleMenu={setToggleMenu} />
       <ContactButton />
       <div>
         <h1>AESTHETICS</h1>
