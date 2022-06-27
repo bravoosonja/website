@@ -5,8 +5,6 @@ import "../styles/fonts.css";
 import styled, { ThemeProvider } from "styled-components";
 // icons
 import { GiMoonBats, GiSun } from "react-icons/gi";
-// components
-import CustomCursor from "../components/feature/customCursor";
 // context provider
 import CursorContextProvider from "../context/cursor-context";
 
@@ -19,9 +17,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
-      <GlobalStyle />
       <CursorContextProvider>
-        <CustomCursor />
+        <GlobalStyle />
         <ThemeContainer onClick={toggleTheme}>
           {theme === "light" ? <GiMoonBats /> : <GiSun />}
         </ThemeContainer>

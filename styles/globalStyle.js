@@ -4,14 +4,16 @@ export const lightTheme = {
   text: "#0A0A0A",
   background: "#F5F5F5",
   accent: "#ff006e",
-  secondary: "#35ff69",
+  secondary: "#ff006e",
+  pastel: "#fea5be",
 };
 
 export const darkTheme = {
   text: "#F5F5F5",
   background: "#0A0A0A",
-  accent: "#35ff69",
-  secondary: "#ff006e",
+  accent: "#04e762",
+  secondary: "#35ff69",
+  pastel: "#c9e4de",
 };
 
 export const GlobalStyle = createGlobalStyle`
@@ -30,34 +32,39 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background:${(props) => props.theme.background};
+        background-color:${(props) => props.theme.background};
         padding: 2rem;
         margin:0;
         width: 100%;
         font-family: 'Mier', "MurMure", sans-serif;
         transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+        display: flex;
     }
 
     h1,h2,h3,h4,h5,h6 {
-        font-family: 'MurMure';
         color:  ${(props) => props.theme.text};
-        text-transform: uppercase; 
     }
 
     h1 {
         font-size: 12rem;
+        font-family: 'Murmure';
+
     }
 
     h2 {
         font-size: 10rem;
+        font-family: 'Murmure';
+
     }
 
     h3 {
         font-size: 8rem;
+        font-family: 'Murmure';
     }
 
     h4 {
         font-size: 6rem;
+        font-family: 'Mier';
     }
 
     h5 {

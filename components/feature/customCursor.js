@@ -3,7 +3,7 @@ import styled from "styled-components";
 // context
 import { CursorContext } from "../../context/cursor-context";
 
-const CustomCursor = ({ props }) => {
+const CustomCursor = () => {
   // to get current mouse position
   const cursor = useRef(null);
 
@@ -12,8 +12,8 @@ const CustomCursor = ({ props }) => {
 
   const onMouseMove = (event) => {
     const { clientX, clientY } = event;
-    const x = clientX - 75;
-    const y = clientY - 75;
+    const x = clientX - 30;
+    const y = clientY - 30;
 
     cursor.current.style = cursorType;
     cursor.current.style.left = `${x}px`;
@@ -35,9 +35,9 @@ const CustomCursor = ({ props }) => {
 };
 
 const Cursor = styled.div`
-  background-color: ${(props) => props.theme.accent};
-  height: 150px;
-  width: 150px;
+  background-color: ${(props) => props.theme.secondary};
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -46,7 +46,6 @@ const Cursor = styled.div`
   transition: 0.5s cubic-bezier(0.75, -1.17, 0.3, 2.33) transform 0.2s
     cubic-bezier(0.75, -1.27, 0.3, 2.33);
   z-index: 1;
-  opacity: 70%;
   mix-blend-mode: difference;
 
   &.hovered {
