@@ -35,7 +35,7 @@ const CustomCursor = () => {
 };
 
 const Cursor = styled.div`
-  background-color: ${(props) => props.theme.secondary};
+  background-color: ${(props) => props.theme.cursor};
   height: 60px;
   width: 60px;
   border-radius: 50%;

@@ -52,7 +52,7 @@ const Title = styled.div`
 `;
 
 const Backdrop = styled.div`
-  background-color: ${(props) => props.theme.accent};
+  background-color: ${(props) => props.theme.pastel};
   backdrop-filter: grayscale(0.5) opacity (0.8);
   border-radius: 15px;
   padding: 1rem 2rem;

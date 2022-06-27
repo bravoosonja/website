@@ -7,6 +7,8 @@ import styled, { ThemeProvider } from "styled-components";
 import { GiMoonBats, GiSun } from "react-icons/gi";
 // context provider
 import CursorContextProvider from "../context/cursor-context";
+// components
+import Layout from "../components/layout";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light");
@@ -18,11 +20,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
       <CursorContextProvider>
-        <GlobalStyle />
         <ThemeContainer onClick={toggleTheme}>
           {theme === "light" ? <GiMoonBats /> : <GiSun />}
+          <GlobalStyle />
         </ThemeContainer>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </CursorContextProvider>
     </ThemeProvider>
   );

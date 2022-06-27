@@ -4,16 +4,17 @@ export const lightTheme = {
   text: "#0A0A0A",
   background: "#F5F5F5",
   accent: "#ff006e",
-  secondary: "#ff006e",
-  pastel: "#fea5be",
+  cursor: "#fb5607",
+  pastel: "#7494ea",
 };
 
 export const darkTheme = {
   text: "#F5F5F5",
   background: "#0A0A0A",
   accent: "#04e762",
-  secondary: "#35ff69",
-  pastel: "#c9e4de",
+  //   accent: "#fb5607",
+  cursor: "#7494ea",
+  pastel: "#4361ee",
 };
 
 export const GlobalStyle = createGlobalStyle`
