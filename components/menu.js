@@ -72,6 +72,7 @@ const StyledMenu = styled.div`
   height: 100%;
   width: 100%;
   padding: 8rem 5rem;
+  cursor: pointer !important;
 `;
 
 const Wrapper = styled.div`
@@ -110,6 +111,7 @@ const MenuLinks = styled.div`
 
     &:hover {
       color: ${(props) => props.theme.accent};
+      cursor: pointer !important;
     }
   }
 `;
@@ -132,8 +134,10 @@ const CloseIconContainer = styled.div`
   font-size: 2rem;
   position: relative;
   padding: 1rem;
+  cursor: pointer !important;
 
   &:hover {
     color: ${(props) => props.theme.accent};
+    cursor: pointer !important;
   }
 `;

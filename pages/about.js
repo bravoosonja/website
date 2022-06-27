@@ -48,7 +48,7 @@ export default function About({ cursorType, cursorChangeHandler }) {
 
 const Container = styled.div`
   width: 95vw;
-  height: max-content;
+  height: 90vh;
 `;
 
 const Wrapper = styled.div`

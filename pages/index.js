@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Head from "next/head";
 // components
 import About from "../pages/about";
+import Skills from "../pages/skills";
 // context
 import { CursorContext } from "../context/cursor-context";
 
@@ -20,6 +21,9 @@ export default function Home() {
           cursorType={cursorType}
           cursorChangeHandler={cursorChangeHandler}
         />
+      </section>
+      <section>
+        <Skills />
       </section>
     </>
   );
