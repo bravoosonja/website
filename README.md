@@ -11,3 +11,5 @@
 # Skills used
 
 # Lessons learned
+
+- Server-side rendering for styled compnents

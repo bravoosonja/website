@@ -8,8 +8,8 @@ export default function About({ cursorType, cursorChangeHandler }) {
           <h1>About</h1>
         </Title>
         <Card
-          onMouseEnter={cursorChangeHandler("seeMore")}
-          onMouseLeave={cursorChangeHandler("")}
+        // onMouseEnter={cursorChangeHandler("seeMore")}
+        // onMouseLeave={cursorChangeHandler("")}
         >
           <div>
             <h5>My latest obsessions</h5>

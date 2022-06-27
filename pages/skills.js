@@ -1,4 +1,6 @@
 import styled from "styled-components";
+// component
+import SeeProjects from "../components/UI/seeProjects";
 
 export default function Skills() {
   return (
@@ -13,6 +15,7 @@ export default function Skills() {
               Nulla eu sodales nunc. Donec diam enim, facilisis vitae eros sed,
               blandit eleifend nulla. Nunc nec diam gravida, dapibus ante eget,
             </p>
+            <SeeProjects />
           </Text>
           <Line />
         </Content>
@@ -54,7 +57,7 @@ export default function Skills() {
 const Container = styled.div`
   height: 95vh;
   width: 100%;
-  margin-top: 7rem;
+  margin-top: 3rem;
 `;
 
 const Wrapper = styled.div`
