@@ -2,55 +2,60 @@ import Link from "next/dist/client/link";
 import styled from "styled-components";
 // icon
 import { CgClose } from "react-icons/cg";
+// components
+import CustomCursor from "./feature/customCursor";
 
 export default function Menu({ toggleMenu, setToggleMenu }) {
   return (
     <>
       {toggleMenu && (
-        <StyledMenu>
-          <Wrapper>
-            <MenuLinks>
-              <CloseIconContainer>
-                <CgClose onClick={() => setToggleMenu(!toggleMenu)} />
-              </CloseIconContainer>
-              <nav>
-                <ul>
-                  <li>
-                    <Link href="/about">
-                      <a>About</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/skills">
-                      <a>Skills</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/projects">
-                      <a>Projects</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contact">
-                      <a>Contact</a>
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-              <Info>
-                <h3>Info</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  dapibus ultricies velit sed consectetur. Sed sapien ex, tempor
-                  tempor sagittis pharetra, auctor vitae urna. Donec congue
-                  lorem ac magna cursus vehicula. Nulla quis justo nec orci
-                  vehicula venenatis. Phasellus gravida consequat pretium. Cras
-                  ut sodales risus. In vitae ultricies ex.
-                </p>
-              </Info>
-            </MenuLinks>
-          </Wrapper>
-        </StyledMenu>
+        <>
+          <CustomCursor />
+          <StyledMenu>
+            <Wrapper>
+              <MenuLinks>
+                <CloseIconContainer>
+                  <CgClose onClick={() => setToggleMenu(!toggleMenu)} />
+                </CloseIconContainer>
+                <nav>
+                  <ul>
+                    <li>
+                      <Link href="/about">
+                        <a>About</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/skills">
+                        <a>Skills</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/projects">
+                        <a>Projects</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contact">
+                        <a>Contact</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+                <Info>
+                  <h3>Info</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                    dapibus ultricies velit sed consectetur. Sed sapien ex,
+                    tempor tempor sagittis pharetra, auctor vitae urna. Donec
+                    congue lorem ac magna cursus vehicula. Nulla quis justo nec
+                    orci vehicula venenatis. Phasellus gravida consequat
+                    pretium. Cras ut sodales risus. In vitae ultricies ex.
+                  </p>
+                </Info>
+              </MenuLinks>
+            </Wrapper>
+          </StyledMenu>
+        </>
       )}
     </>
   );

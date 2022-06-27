@@ -5,6 +5,10 @@ import "../styles/fonts.css";
 import styled, { ThemeProvider } from "styled-components";
 // icons
 import { GiMoonBats, GiSun } from "react-icons/gi";
+// components
+import CustomCursor from "../components/feature/customCursor";
+// context provider
+import CursorContextProvider from "../context/cursor-context";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light");
@@ -16,10 +20,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
       <GlobalStyle />
-      <ThemeContainer onClick={toggleTheme}>
-        {theme === "light" ? <GiMoonBats /> : <GiSun />}
-      </ThemeContainer>
-      <Component {...pageProps} />
+      <CursorContextProvider>
+        <CustomCursor />
+        <ThemeContainer onClick={toggleTheme}>
+          {theme === "light" ? <GiMoonBats /> : <GiSun />}
+        </ThemeContainer>
+        <Component {...pageProps} />
+      </CursorContextProvider>
     </ThemeProvider>
   );
 }
@@ -37,7 +44,7 @@ const ThemeContainer = styled.div`
 
   &:hover {
     text-decoration: underline;
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.primary};
   }
 `;
 

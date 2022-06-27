@@ -4,14 +4,14 @@ export const lightTheme = {
   text: "#0A0A0A",
   background: "#F5F5F5",
   accent: "#ff006e",
-  secondary: "#9655ff",
+  secondary: "#35ff69",
 };
 
 export const darkTheme = {
   text: "#F5F5F5",
   background: "#0A0A0A",
   accent: "#35ff69",
-  secondary: "ff006e",
+  secondary: "#ff006e",
 };
 
 export const GlobalStyle = createGlobalStyle`
