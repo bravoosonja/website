@@ -47,12 +47,12 @@ export default function About({ cursorType, cursorChangeHandler }) {
 }
 
 const Container = styled.div`
-  width: 95vw;
+  width: 100%;
   height: 90vh;
 `;
 
 const Wrapper = styled.div`
-  width: 95vw;
+  width: 100%;
 `;
 
 const Title = styled.div`
@@ -60,7 +60,7 @@ const Title = styled.div`
   top: 8vh;
   margin-left: 30vw;
   position: relative;
-  z-index: 3;
+  z-index: 10;
   height: min-content;
   width: min-content;
   color: ${(props) => props.theme.text};
@@ -76,6 +76,7 @@ const Backdrop = styled.div`
   position: absolute;
   top: 35vh;
   left: 30vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 `;
 
 const Content = styled.div`

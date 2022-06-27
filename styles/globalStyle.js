@@ -6,6 +6,7 @@ export const lightTheme = {
   accent: "#ff006e",
   cursor: "#fff",
   pastel: "#a594f9",
+  blur: "hsl(0 100% 0% /0.1)",
 };
 
 export const darkTheme = {
@@ -16,6 +17,7 @@ export const darkTheme = {
   cursor: "#fff",
   //   cursor: "#000",
   pastel: "#4361ee",
+  blur: "hsl(0 0% 100% /0.1)",
 };
 
 export const GlobalStyle = createGlobalStyle`
@@ -36,12 +38,11 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         background-color:${(props) => props.theme.background};
-        padding: 2rem;
-        margin:0;
         width: 100%;
+        padding: 1vh 5vw;
         font-family: 'Mier', "MurMure", sans-serif;
-        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-        display: flex;
+        /* transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); */
+        /* display: flex; */
       
     }
 

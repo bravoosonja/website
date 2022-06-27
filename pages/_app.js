@@ -42,6 +42,7 @@ const ThemeContainer = styled.div`
   color: ${({ theme }) => theme.text};
   padding: 0.7rem 0;
   width: full;
+  margin-top: 1rem;
 
   &:hover {
     text-decoration: underline;
