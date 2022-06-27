@@ -1,12 +1,28 @@
 import styled from "styled-components";
 
-export default function About({ props }) {
+export default function About({ cursorType, cursorChangeHandler }) {
   return (
     <Container>
       <Wrapper>
         <Title>
           <h1>About</h1>
         </Title>
+        <Card
+          onMouseEnter={cursorChangeHandler("seeMore")}
+          onMouseLeave={cursorChangeHandler("")}
+        >
+          <div>
+            <h5>My latest obsessions</h5>
+            <p>Animation effects</p>
+            <p>Parallax scroll</p>
+            <p>Thinking of different ways to use mix-blend-mode</p>
+          </div>
+          <div>
+            <h5>My regular obsessions</h5>
+            <p>Nutella</p>
+            <p>Mechanical keyboards</p>
+          </div>
+        </Card>
         <Backdrop>
           <Content>
             <h4>
@@ -24,18 +40,6 @@ export default function About({ props }) {
               rutrum.
             </p>
           </Content>
-          {/* <Card>
-            <div>
-              <h5>My latest obsessions</h5>
-              <p>Animation effects</p>
-              <p>Parallax scroll</p>
-            </div>
-            <div>
-              <h5>My regular obsessions</h5>
-              <p>Nutella</p>
-              <p>Mechanical keyboards</p>
-            </div>
-          </Card> */}
         </Backdrop>
       </Wrapper>
     </Container>
@@ -67,9 +71,11 @@ const Backdrop = styled.div`
   border-radius: 15px;
   padding: 1rem 2rem;
   display: flex;
-  margin-left: 25vw;
   height: max-content;
-  width: 65%;
+  width: 60%;
+  position: absolute;
+  top: 35vh;
+  left: 30vw;
 `;
 
 const Content = styled.div`
@@ -78,7 +84,6 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  color: ${(props) => props.theme.text};
   width: 70vw;
   padding: 3rem;
   padding-top: 4rem;
@@ -88,35 +93,47 @@ const Content = styled.div`
     font-family: "Mier";
     font-size: 3rem;
     line-height: normal;
+    color: ${(props) => props.theme.background};
   }
   p {
     margin-top: 1rem;
+    color: ${(props) => props.theme.background};
   }
 `;
 
-// const Card = styled.div`
-//   margin-top: 2rem;
-//   padding: 2rem;
-//   position: static;
-//   top: 10vh;
-//   left: 10vw;
-//   border-radius: 15px;
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   flex-direction: column;
-//   background-color: ${(props) => props.theme.cursor};
-//   height: 30vh;
-//   width: fit-content;
-//   gap: 2rem;
-//   opacity: 80%;
+const Card = styled.div`
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+  position: relative;
+  top: 0vh;
+  left: 3vw;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  flex-direction: column;
+  width: max-content;
+  gap: 2rem;
+  opacity: 80%;
+  align-items: flex-start;
 
-//   h5 {
-//     font-size: 2rem;
-//   }
+  h5 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: ${(props) => props.theme.background};
 
-//   p {
-//     line-height: normal;
-//     font-size: 1.2rem;
-//     backdrop-filter: grayscale(0.8) opacity (0.2);
-//   }
-// `;
+    &:hover {
+      color: ${(props) => props.theme.text};
+    }
+  }
+
+  p {
+    line-height: normal;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: ${(props) => props.theme.background};
+
+    &:hover {
+      color: ${(props) => props.theme.text};
+    }
+  }
+`;

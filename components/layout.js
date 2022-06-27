@@ -9,6 +9,7 @@ import CustomCursor from "./feature/customCursor";
 export default function Layout({ children }) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
+
   return (
     <>
       <CustomCursor

@@ -12,8 +12,8 @@ const CustomCursor = () => {
 
   const onMouseMove = (event) => {
     const { clientX, clientY } = event;
-    const x = clientX - 30;
-    const y = clientY - 30;
+    const x = clientX - 75;
+    const y = clientY - 75;
 
     cursor.current.style = cursorType;
     cursor.current.style.left = `${x}px`;
@@ -36,8 +36,8 @@ const CustomCursor = () => {
 
 const Cursor = styled.div`
   background-color: ${(props) => props.theme.cursor};
-  height: 60px;
-  width: 60px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -47,13 +47,14 @@ const Cursor = styled.div`
     cubic-bezier(0.75, -1.27, 0.3, 2.33);
   z-index: 1;
   mix-blend-mode: difference;
+  content: "";
 
-  &.hovered {
+  &.seeMore {
     content: "See More";
-    font-family: "Murmure";
+    color: ${(props) => props.theme.text};
     font-size: 1rem;
-    transition: 0.5s cubic-bezier(0.75, -1.17, 0.3, 2.33) transform 0.2s
-      cubic-bezier(0.75, -1.27, 0.3, 2.33);
+    /* transition: 0.5s cubic-bezier(0.75, -1.17, 0.3, 2.33) transform 0.2s
+      cubic-bezier(0.75, -1.27, 0.3, 2.33); */
   }
 `;
 

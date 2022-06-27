@@ -4,8 +4,8 @@ export const lightTheme = {
   text: "#0A0A0A",
   background: "#F5F5F5",
   accent: "#ff006e",
-  cursor: "#fb5607",
-  pastel: "#7494ea",
+  cursor: "#fff",
+  pastel: "#a594f9",
 };
 
 export const darkTheme = {
@@ -13,7 +13,8 @@ export const darkTheme = {
   background: "#0A0A0A",
   accent: "#04e762",
   //   accent: "#fb5607",
-  cursor: "#7494ea",
+  cursor: "#fff",
+  //   cursor: "#000",
   pastel: "#4361ee",
 };
 
@@ -30,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         text-decoration: none;
+        cursor:none;
     }
 
     body {
@@ -40,6 +42,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Mier', "MurMure", sans-serif;
         transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
         display: flex;
+      
     }
 
     h1,h2,h3,h4,h5,h6 {

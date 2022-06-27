@@ -49,7 +49,6 @@ const StyledButton = styled.div`
   border: none;
   background: none;
   outline: none;
-  cursor: pointer;
   font-size: 1.3rem;
   font-weight: 700;
   color: ${(props) => props.theme.text};
