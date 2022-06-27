@@ -19,7 +19,7 @@ export const darkTheme = {
 
 export const GlobalStyle = createGlobalStyle`
     html {
-        box-sizing: border-box;
+        /* box-sizing: border-box; */
         -webkit-font-smoothing: antialiased;
         padding:0;
         margin:0;

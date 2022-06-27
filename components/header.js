@@ -19,7 +19,6 @@ export default function Header({ setToggleMenu }) {
 
 const Container = styled.div`
   width: 100%;
-  margin: 0 auto;
 `;
 
 const InnerHeader = styled.div`
