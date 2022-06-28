@@ -13,9 +13,7 @@ export default function Home() {
       <section>
         <Banner />
       </section>
-      <section>
-        <About />
-      </section>
+      <section>{/* <About /> */}</section>
       <section>
         <Skills />
       </section>

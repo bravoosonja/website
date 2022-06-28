@@ -13,9 +13,7 @@ export const darkTheme = {
   text: "#F5F5F5",
   background: "#0A0A0A",
   accent: "#04e762",
-  //   accent: "#fb5607",
   cursor: "#fff",
-  //   cursor: "#000",
   pastel: "#4361ee",
   blur: "hsl(0 0% 100% /0.1)",
 };
@@ -36,14 +34,15 @@ export const GlobalStyle = createGlobalStyle`
     body {
         box-sizing: border-box;
         width: 100%;
-        padding: 3rem;
+        margin: 0;
+        padding: 0;
         background-color:${(props) => props.theme.background};
         font-family: 'Mier', "MurMure", sans-serif;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); */
+        /* justify-content: center;
+        align-items: center; */
+        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
         /* display: flex; */
       
     }

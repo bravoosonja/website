@@ -56,11 +56,12 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  margin-left: 50%;
+  /* margin-left: 50%; */
   position: fixed;
   top: 1rem;
-  left: 60vw;
-  margin: auto;
+  left: 70%;
+  margin: 0;
+  padding: 0;
 `;
 
 const NavItem = styled.button`

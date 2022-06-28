@@ -47,12 +47,13 @@ const Container = styled.div`
   width: 100%;
   height: 9vh;
   margin-top: 2rem;
+  padding: 0 3rem;
 `;
 
 const Title = styled.div`
   /* left: 12%;
   top: 5%; */
-  /* position: relative; */
+  position: relative;
   z-index: 10;
   width: min-content;
   color: ${(props) => props.theme.text};

@@ -5,6 +5,7 @@ import { CursorContext } from "../context/cursor-context";
 import Header from "./header";
 import Menu from "./menu";
 import CustomCursor from "./feature/customCursor";
+import Cookie from "./UI/cookie";
 
 export default function Layout({ children }) {
   // const [toggleMenu, setToggleMenu] = useState(false);
@@ -21,6 +22,7 @@ export default function Layout({ children }) {
         <Header />
       </nav>
       <main>{children}</main>
+      <Cookie />
     </>
   );
 }

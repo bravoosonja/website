@@ -59,15 +59,14 @@ export default function Skills() {
 
 const Container = styled.div`
   width: 100%;
-  padding-top: 2rem;
-  height: 90vh;
+  height: 95vh;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   /* width: 100%; */
-
+  padding: 0 3rem;
   h1 {
     position: relative;
     left: 20%;
