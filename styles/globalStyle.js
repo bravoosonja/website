@@ -21,9 +21,8 @@ export const darkTheme = {
 };
 
 export const GlobalStyle = createGlobalStyle`
-    html {
-        /* box-sizing: border-box; */
-        -webkit-font-smoothing: antialiased;
+    html{
+       
         padding:0;
         margin:0;
     }
@@ -31,15 +30,14 @@ export const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
         cursor:none;
     }
 
     body {
-        background-color:${(props) => props.theme.background};
+        box-sizing: border-box;
         width: 100%;
-        padding: 1vh 5vw;
+        padding: 3rem;
+        background-color:${(props) => props.theme.background};
         font-family: 'Mier', "MurMure", sans-serif;
         /* transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); */
         /* display: flex; */
@@ -103,16 +101,16 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     img {
-        width: 100%;
         display: block;
        
     }
 
     button {
-        font-size:100%;
         font-family: inherit;
         border:0;
         padding:0;
+        margin:0;
+        overflow: visible;
     }
     
 `;

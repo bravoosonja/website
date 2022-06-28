@@ -33,16 +33,12 @@ function MyApp({ Component, pageProps }) {
 }
 
 const ThemeContainer = styled.div`
-  font-style: italic;
   font-size: 1.7rem;
-  padding: 0 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: ${({ theme }) => theme.text};
-  padding: 0.7rem 0;
-  width: full;
-  margin-top: 1rem;
+  padding: 1rem 0;
 
   &:hover {
     text-decoration: underline;

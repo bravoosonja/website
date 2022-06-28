@@ -7,11 +7,19 @@ export default function SeeProjects() {
     <Wrapper>
       <Button>
         <BsArrowUpRight />
+        See relevant projects
       </Button>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-const Button = styled.button``;
+const Button = styled.button`
+  font-size: 1.1rem;
+  border: 1px solid ${(props) => props.theme.text};
+`;

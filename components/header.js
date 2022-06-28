@@ -49,7 +49,8 @@ export default function Header({ setToggleMenu }) {
 }
 
 const Container = styled.div`
-  width: 100%;
+  /* width: 100%; */
+  padding: 0 2rem;
 `;
 
 const Nav = styled.div`
@@ -57,7 +58,7 @@ const Nav = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%;
 `;
 
 const NavItem = styled.button`
@@ -67,8 +68,8 @@ const NavItem = styled.button`
   border-radius: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 1rem;
-  width: 100%;
+  /* margin: 1rem; */
+  /* width: 12%; */
   color: ${(props) => props.theme.text};
 
   &:hover {
@@ -90,12 +91,12 @@ const Logo = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  right: 10vw;
   position: fixed;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 `;
 
+// mobile menu ?
 const InnerHeader = styled.div`
   z-index: 10;
   display: flex;

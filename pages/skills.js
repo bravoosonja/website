@@ -6,6 +6,7 @@ export default function Skills() {
   return (
     <Container>
       <Wrapper>
+        <h1>Skills</h1>
         <Content>
           <Title>HTML/CSS</Title>
           <Text>
@@ -15,8 +16,10 @@ export default function Skills() {
               Nulla eu sodales nunc. Donec diam enim, facilisis vitae eros sed,
               blandit eleifend nulla. Nunc nec diam gravida, dapibus ante eget,
             </p>
-            <SeeProjects />
           </Text>
+          <SeeProjectsWrapper>
+            <SeeProjects />
+          </SeeProjectsWrapper>
           <Line />
         </Content>
         <Content>
@@ -55,25 +58,38 @@ export default function Skills() {
 }
 
 const Container = styled.div`
-  height: 95vh;
   width: 100%;
-  margin-top: 3rem;
+  padding-top: 2rem;
+  height: 90vh;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  /* width: 100%; */
+
+  h1 {
+    position: relative;
+    left: 20%;
+    width: min-content;
+  }
 `;
 
 const Content = styled.div`
-  height: 30vh;
+  height: 40vh;
   width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 `;
 
 const Line = styled.div`
   width: 75vw;
-  border-bottom: 2px solid ${(props) => props.theme.text}; ;
+  border-bottom: 2px solid ${(props) => props.theme.text};
 `;
+
+const SeeProjectsWrapper = styled.div``;
 
 const Title = styled.h3`
   font-size: 6rem;

@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'Mier';
-    src:  url("../assets/fonts/MierA-Regular.woff2") format('woff2');
+  font-family: "Mier";
+  src: url("../assets/fonts/MierA-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: 'MurMure';
-    src:  url("../assets/fonts/LeMurmure-Regular.woff") format('woff');
+  font-family: "MurMure";
+  src: url("../assets/fonts/LeMurmure-Regular.woff") format("woff");
 }
