@@ -12,4 +12,6 @@
 
 # Lessons learned
 
-- Server-side rendering for styled compnents
+- Server-side rendering for styled components
+  -babel plugin
+- Using contexts
