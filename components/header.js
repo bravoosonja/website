@@ -4,38 +4,37 @@ import styled from "styled-components";
 export default function Header({ props }) {
   return (
     <Container>
-      <Nav>
-        <Logo>
+      <Wrapper>
+        <NavItem>
           <Link href="/">
-            <a>My Name</a>
+            <a>Home</a>
           </Link>
-        </Logo>
-        <Wrapper>
-          <NavItem>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/skills">
-              <a>Skills</a>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/projects">
-              <a>Projects</a>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
-          </NavItem>
-        </Wrapper>
-        {/* <NavItem>
+        </NavItem>
+        <NavItem>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="/skills">
+            <a>Skills</a>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="/projects">
+            <a>Projects</a>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="/contact">
+            <a>Contact</a>
+          </Link>
+        </NavItem>
+      </Wrapper>
+      {/* <NavItem>
           <Theme onClick={toggleTheme} theme={theme} />
         </NavItem> */}
-      </Nav>
+
       {/* <InnerHeader>
         <Logo>
           <Link href="/">
@@ -56,18 +55,11 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Nav = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-`;
-
 const Wrapper = styled.div`
   margin-left: 50%;
   position: fixed;
   top: 1rem;
-  left: 68vw;
+  left: 60vw;
   margin: auto;
 `;
 
@@ -83,18 +75,6 @@ const NavItem = styled.button`
 
   &:hover {
     color: ${(props) => props.theme.accent};
-  }
-`;
-
-const Logo = styled.div`
-  a {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: ${(props) => props.theme.text};
-
-    &:hover {
-      color: ${(props) => props.theme.accent};
-    }
   }
 `;
 

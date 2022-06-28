@@ -39,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
         padding: 3rem;
         background-color:${(props) => props.theme.background};
         font-family: 'Mier', "MurMure", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         /* transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); */
         /* display: flex; */
       

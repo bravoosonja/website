@@ -45,13 +45,14 @@ export default function About({ cursorType, cursorChangeHandler }) {
 
 const Container = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 9vh;
+  margin-top: 2rem;
 `;
 
 const Title = styled.div`
-  left: 12%;
-  top: 5%;
-  position: relative;
+  /* left: 12%;
+  top: 5%; */
+  /* position: relative; */
   z-index: 10;
   width: min-content;
   color: ${(props) => props.theme.text};
@@ -64,7 +65,6 @@ const Backdrop = styled.div`
   display: flex;
   /* height: max-content; */
   width: 60%;
-  position: absolute;
   top: 35%;
   left: 10%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
