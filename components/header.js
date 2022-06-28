@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-export default function Header({ setToggleMenu }) {
+export default function Header({ props }) {
   return (
     <Container>
       <Nav>
@@ -49,16 +49,26 @@ export default function Header({ setToggleMenu }) {
 }
 
 const Container = styled.div`
-  /* width: 100%; */
-  padding: 0 2rem;
-`;
-
-const Nav = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+`;
+
+const Nav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+`;
+
+const Wrapper = styled.div`
+  margin-left: 50%;
+  position: fixed;
+  top: 1rem;
+  left: 68vw;
+  margin: auto;
 `;
 
 const NavItem = styled.button`
@@ -68,9 +78,8 @@ const NavItem = styled.button`
   border-radius: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  /* margin: 1rem; */
-  /* width: 12%; */
   color: ${(props) => props.theme.text};
+  margin-left: 2em;
 
   &:hover {
     color: ${(props) => props.theme.accent};
@@ -87,13 +96,6 @@ const Logo = styled.div`
       color: ${(props) => props.theme.accent};
     }
   }
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  position: fixed;
-  justify-content: flex-end;
-  align-items: center;
 `;
 
 // mobile menu ?

@@ -7,7 +7,7 @@ import Menu from "./menu";
 import CustomCursor from "./feature/customCursor";
 
 export default function Layout({ children }) {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  // const [toggleMenu, setToggleMenu] = useState(false);
   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
 
   return (
@@ -17,8 +17,8 @@ export default function Layout({ children }) {
         cursorChangeHandler={cursorChangeHandler}
       />
       <nav>
-        <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
-        <Header setToggleMenu={setToggleMenu} />
+        {/* <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
+        <Header />
       </nav>
       <main>{children}</main>
     </>
