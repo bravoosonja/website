@@ -81,6 +81,7 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  line-height: 1;
 `;
 
 const Line = styled.div`
@@ -96,6 +97,7 @@ const Title = styled.h3`
 
 const Text = styled.div`
   p {
+    margin: 2rem 0;
     font-size: 1.5rem;
   }
 `;

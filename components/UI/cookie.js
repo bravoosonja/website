@@ -1,22 +1,19 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-export default function Cookie() {
-  const { showCookie, setShowCookie } = useState(true);
+export default function Cookie({ setShowCookie }) {
   return (
     <>
-      {showCookie && (
-        <Wrapper>
-          <Content>
-            <Text>
-              <h4>No, I don't want your non-edible cookies.</h4>
-            </Text>
-            <AcceptCookie onClick={() => setShowCookie(false)}>
-              Real Cookies Only
-            </AcceptCookie>
-          </Content>
-        </Wrapper>
-      )}
+      <Wrapper>
+        <Content>
+          <Text>
+            <h4>No, I don't want your non-edible cookies.</h4>
+          </Text>
+          <AcceptCookie onClick={() => setShowCookie(false)}>
+            Real Cookies Only
+          </AcceptCookie>
+        </Content>
+      </Wrapper>
     </>
   );
 }

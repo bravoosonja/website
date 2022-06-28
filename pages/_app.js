@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 // styles
 import { lightTheme, darkTheme, GlobalStyle } from "../styles/globalStyle";
 import "../styles/fonts.css";
@@ -9,6 +9,8 @@ import { GiMoonBats, GiSun } from "react-icons/gi";
 import CursorContextProvider from "../context/cursor-context";
 // components
 import Layout from "../components/layout";
+// context
+import { ThemeContext } from "styled-components";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light");

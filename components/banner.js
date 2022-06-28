@@ -44,7 +44,7 @@ const Content = styled.div`
 const Arrow = styled.button`
   font-size: 1rem;
   position: relative;
-  top: 40vh;
+  top: 37.5vh;
   right: 25vw;
   transform: rotate(45deg) scale(3.6);
   z-index: 50;
