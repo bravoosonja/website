@@ -23,10 +23,10 @@ export default function Home() {
           onMouseLeave={() => cursorChangeHandler("")}
         />
       </section>
-      {/* <section>
+      <section>
         <About />
       </section>
-      <section>
+      {/* <section>
         <Skills />
       </section>
       <section>
