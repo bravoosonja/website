@@ -1,0 +1,32 @@
+@import "../variables.module.scss";
+
+.cursor {
+  background-color: $dark-accent;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.banner {
+  background-color: $light-cursor;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.seeMore {
+  content: "SEE MORE";
+  font-family: "Mier";
+}

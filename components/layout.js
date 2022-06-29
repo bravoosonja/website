@@ -1,13 +1,12 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 // context
-import { CursorContext } from "../context/cursor-context";
-import { ThemeContext } from "../context/theme-context";
+import CursorContextProvider, {
+  CursorContext,
+} from "../context/cursor-context";
 // components
 import Header from "./header";
-import Menu from "./menu";
 import CustomCursor from "./feature/customCursor";
 import Cookie from "./UI/cookie";
-import Theme from "../components/feature/theme";
 // hooks
 import useLayoutFetch from "../hooks/useLayoutFetch";
 
@@ -19,18 +18,14 @@ export default function Layout({ children }) {
   const { showCookie, setShowCookie } = useLayoutFetch();
 
   return (
-    <>
-      <CustomCursor
-        cursorType={cursorType}
-        cursorChangeHandler={cursorChangeHandler}
-      />
+    <CursorContextProvider>
       <nav>
         {/* <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
-        <Header />
+        <Header cursorChangeHandler={cursorChangeHandler("cursor")} />
         {/* <Theme theme={theme} toggleTheme={toggleTheme} /> */}
       </nav>
       <main>{children}</main>
       {showCookie && <Cookie setShowCookie={setShowCookie} />}
-    </>
+    </CursorContextProvider>
   );
 }

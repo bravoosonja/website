@@ -1,0 +1,63 @@
+@import "../variables.module.scss";
+
+.container {
+  width: 100%;
+  height: 95vh;
+  margin-top: 2rem;
+  background: $dark-background;
+
+  .wrapper {
+    padding: 1rem 3rem;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: "Manrope";
+    color: $dark-text;
+
+    h2 {
+      font-size: 7rem;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: right;
+      text-align: left;
+    }
+
+    .right {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      text-align: right;
+
+      .arrow {
+        font-size: 1rem;
+        position: relative;
+        // top: 3vh;
+        // left: -25vw;
+        transform: scale(5) rotate(40deg);
+        z-index: 50;
+        margin: 0 auto;
+        background: transparent;
+
+        span {
+          font-family: "Murmure";
+          font-size: 0.5rem;
+          position: relative;
+          color: $dark-text;
+          font-style: italic;
+
+          &:hover {
+            color: $dark-accent;
+          }
+        }
+      }
+    }
+  }
+}
