@@ -3,34 +3,45 @@
 .container {
   padding: 1rem 3rem;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  height: 5vh;
+  background-color: $dark-background;
 
   .wrapper {
     position: fixed;
     top: 1rem;
-    left: 70%;
+    left: 62vw;
     margin: 0;
     padding: 0;
 
-    @media screen and (min-width: $laptop-min) and (max-width: $laptop-max) {
-      left: 60%;
-    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
 
-    .navItem {
-      background: transparent;
-      backdrop-filter: blur(2em);
-      padding: 1rem;
-      border-radius: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: $dark-blur;
-      margin-left: 2em;
+      @media screen and (min-width: $laptop-min) and (max-width: $laptop-max) {
+        left: 60%;
+      }
 
-      a {
-        color: $dark-accent;
+      .navItem {
+        // background: transparent;
+        backdrop-filter: blur(2em);
+        padding: 1rem;
+        border-radius: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $dark-blur;
+        margin-left: 2em;
+        z-index: 5;
+
+        a {
+          color: $dark-text;
+
+          :hover {
+            color: $dark-accent;
+          }
+        }
       }
     }
   }

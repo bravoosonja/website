@@ -37,17 +37,16 @@ export default function Banner() {
             <h2>I enjoy aesthetic, experiences</h2>
           </div>
           <div className={styles.right}>
-            <h2>
-              creating fun user
+            <h2> creating fun user</h2>
+
+            <div className={styles.arrow}>
+              <span>Scroll down</span>
               <IconContext.Provider value={{ color: "#00FF39" }}>
-                <div className={styles.arrow}>
-                  <span>Scroll down</span>
-                  <GiBranchArrow />
-                  <GiBranchArrow />
-                  <GiBranchArrow />
-                </div>
+                <GiBranchArrow />
+                <GiBranchArrow />
+                <GiBranchArrow />
               </IconContext.Provider>
-            </h2>
+            </div>
           </div>
         </div>
       </motion.div>
