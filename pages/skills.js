@@ -8,7 +8,7 @@ export default function Skills() {
       <Wrapper>
         <h1>Skills</h1>
         <Content>
-          <Title>HTML/CSS</Title>
+          <Title>HTML/CSS & JavaScript</Title>
           <Text>
             <p>
               Nulla eu sodales nunc. Donec diam enim, facilisis vitae eros sed,
@@ -23,8 +23,9 @@ export default function Skills() {
           <Line />
         </Content>
         <Content>
-          <Title>Vanillla JavaScript</Title>
+          <Title>JavaScript Frameworks</Title>
           <Text>
+            <p>React, Styled Components</p>
             <p>
               Nulla eu sodales nunc. Donec diam enim, facilisis vitae eros sed,
               blandit eleifend nulla. Nunc nec diam gravida, dapibus ante eget,
@@ -33,8 +34,9 @@ export default function Skills() {
           <Line />
         </Content>
         <Content>
-          <Title>React</Title>
+          <Title>Web Frameworks</Title>
           <Text>
+            <p>Next JS, Gatsby JS</p>
             <p>
               Nulla eu sodales nunc. Donec diam enim, facilisis vitae eros sed,
               blandit eleifend nulla. Nunc nec diam gravida, dapibus ante eget,
@@ -43,7 +45,7 @@ export default function Skills() {
           <Line />
         </Content>
         <Content>
-          <Title>Frameworks</Title>
+          <Title>Network Security</Title>
           <Text>
             <p>
               Nulla eu sodales nunc. Donec diam enim, facilisis vitae eros sed,
@@ -71,6 +73,7 @@ const Wrapper = styled.div`
     position: relative;
     left: 20%;
     width: min-content;
+    font-family: "Murmure";
   }
 `;
 
@@ -92,12 +95,15 @@ const Line = styled.div`
 const SeeProjectsWrapper = styled.div``;
 
 const Title = styled.h3`
-  font-size: 6rem;
+  font-size: 5rem;
+  font-family: "Manrope";
+  font-weight: 600;
 `;
 
 const Text = styled.div`
   p {
     margin: 2rem 0;
     font-size: 1.5rem;
+    font-family: "Mier";
   }
 `;

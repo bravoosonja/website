@@ -18,6 +18,13 @@ export const darkTheme = {
   blur: "hsl(0 0% 100% /0.1)",
 };
 
+export const device = {
+  mobile: "(min-width: 360px) and (max-width: 425px)",
+  tablet: "(min-width: 426px) and (max-width:768)",
+  laptop: "(min-width: 1024px) and (max-width:1440px)",
+  desktop: "(min-width:1441px)",
+};
+
 export const GlobalStyle = createGlobalStyle`
     html{
        
@@ -37,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         background-color:${(props) => props.theme.background};
-        font-family: 'Mier', "MurMure", sans-serif;
+        font-family: 'Mier', "MurMure", "Manrope", sans-serif;
         display: flex;
         flex-direction: column;
         /* justify-content: center;
@@ -59,18 +66,18 @@ export const GlobalStyle = createGlobalStyle`
 
     h2 {
         font-size: 10rem;
-        font-family: 'Murmure';
+       
 
     }
 
     h3 {
         font-size: 8rem;
-        font-family: 'Murmure';
+        
     }
 
     h4 {
         font-size: 6rem;
-        font-family: 'Mier';
+        
     }
 
     h5 {
@@ -85,8 +92,6 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 20px;
         font-family: 'Mier';
         color: ${(props) => props.theme.text};
-       
-       
     }
 
     ul,li {

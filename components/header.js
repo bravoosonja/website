@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { device } from "../styles/globalStyle";
 
 export default function Header({ props }) {
   return (
@@ -62,6 +63,10 @@ const Wrapper = styled.div`
   left: 70%;
   margin: 0;
   padding: 0;
+
+  @media screen and (${device.laptop}) {
+    left: 60%;
+  }
 `;
 
 const NavItem = styled.button`

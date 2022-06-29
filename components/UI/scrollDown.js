@@ -4,11 +4,9 @@ import { GiBranchArrow } from "react-icons/gi";
 
 export default function ScrollDown() {
   return (
-    <Wrapper>
-      <Content>
-        <GiBranchArrow />
-      </Content>
-    </Wrapper>
+    <Content>
+      <GiBranchArrow />
+    </Content>
   );
 }
 
