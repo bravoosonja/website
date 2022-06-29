@@ -34,11 +34,10 @@ export default function Banner() {
       <motion.div className={styles.container} variants={banner}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
-            <h2>I enjoy aesthetic, experiences</h2>
+            <h2>I enjoy aesthetic, exper</h2>
           </div>
           <div className={styles.right}>
-            <h2> creating fun user</h2>
-
+            <h2> creating fun user iences</h2>
             <div className={styles.arrow}>
               <span>Scroll down</span>
               <IconContext.Provider value={{ color: "#00FF39" }}>
