@@ -71,6 +71,7 @@ h6 {
 p {
   font-size: 20px;
   font-family: "Mier";
+  overflow-wrap: break-word;
 }
 
 ol,
@@ -88,7 +89,6 @@ img {
 }
 
 button {
-  border-radius: 0.5rem;
   box-sizing: border-box;
   font-family: inherit;
   border: 0;
@@ -107,7 +107,8 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
 
-  :hover {
-    background-color: rgb(249, 250, 251);
+  &:hover {
+    background-color: black;
+    color: white;
   }
 }

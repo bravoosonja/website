@@ -26,10 +26,10 @@ export default function Home() {
       <section>
         <About />
       </section>
-      {/* <section>
+      <section>
         <Skills />
       </section>
-      <section>
+      {/* <section>
         <Projects />
       </section>
       <section>
