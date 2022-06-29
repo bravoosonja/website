@@ -1,0 +1,31 @@
+@import "../../styles/variables.module.scss";
+
+.container {
+  padding: 1rem 3rem;
+  position: fixed;
+  bottom: 0;
+  //   height: 6vh;
+  width: 100%;
+  background: $dark-background;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem 3rem;
+
+    .content {
+      font-family: "Mier";
+
+      h4 {
+        font-size: 1.1rem;
+        color: $dark-text;
+      }
+
+      .acceptCookie {
+        color: $dark-text;
+        font-size: 1rem;
+      }
+    }
+  }
+}
