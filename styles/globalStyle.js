@@ -1,30 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-export const lightTheme = {
-  text: "#0A0A0A",
-  background: "#F5F5F5",
-  accent: "#ff006e",
-  cursor: "#fff",
-  pastel: "#a594f9",
-  blur: "hsl(0 100% 0% /0.1)",
-};
-
-export const darkTheme = {
-  text: "#F5F5F5",
-  background: "#0A0A0A",
-  accent: "#04e762",
-  cursor: "#fff",
-  pastel: "#4361ee",
-  blur: "hsl(0 0% 100% /0.1)",
-};
-
-export const device = {
-  mobile: "(min-width: 360px) and (max-width: 425px)",
-  tablet: "(min-width: 426px) and (max-width:768)",
-  laptop: "(min-width: 1024px) and (max-width:1440px)",
-  desktop: "(min-width:1441px)",
-};
-
 export const GlobalStyle = createGlobalStyle`
     html{
        

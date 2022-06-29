@@ -1,37 +1,37 @@
 import { useState, useContext } from "react";
 // styles
-import { lightTheme, darkTheme, GlobalStyle } from "../styles/globalStyle";
-import "../styles/fonts.css";
-import styled, { ThemeProvider } from "styled-components";
+//import { lightTheme, darkTheme, GlobalStyle } from "../styles/globalStyle";
+import "../styles/globals.scss";
+//import styled, { ThemeProvider } from "styled-components";
 // icons
 import { GiMoonBats, GiSun } from "react-icons/gi";
 // context
-import { ThemeContext } from "styled-components";
+//import { ThemeContext } from "styled-components";
 import CursorContextProvider from "../context/cursor-context";
 // components
 import Layout from "../components/layout";
 import { motion, AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
 
-  const toggleTheme = () => {
-    theme == "light" ? setTheme("dark") : setTheme("light");
-  };
+  // const toggleTheme = () => {
+  //   theme == "light" ? setTheme("dark") : setTheme("light");
+  // };
 
   return (
     <AnimatePresence exitBeforeEnter>
-      <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
-        <CursorContextProvider>
-          <ThemeContainer onClick={toggleTheme}>
+      {/* <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}> */}
+      <CursorContextProvider>
+        {/* <ThemeContainer onClick={toggleTheme}>
             {theme === "light" ? <GiMoonBats /> : <GiSun />}
             <GlobalStyle />
-          </ThemeContainer>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </CursorContextProvider>
-      </ThemeProvider>
+          </ThemeContainer> */}
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </CursorContextProvider>
+      {/* </ThemeProvider> */}
     </AnimatePresence>
   );
 }

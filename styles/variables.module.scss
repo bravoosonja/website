@@ -1,0 +1,25 @@
+// for light background
+$light-text: #0A0A0A;
+$light-background: #F5F5F5;
+$light-accent:#ff006e;
+$light-cursor:#fff;
+$light-pastel:#a594f9;
+$light-blur:hsl(0 100% 0% /0.1);
+  
+// for dark background
+$dark-text: #F5F5F5;
+$dark-background: #0A0A0A;
+$dark-accent: #04e762;
+$dark-cursor: #fff;
+$dark-pastel: #4361ee;
+$dark-blur: hsl(0 0% 100% /0.1);
+
+// media breakpoints
+// max-width
+$mobile: 425px;
+$tablet: 768px;
+//min-width and max-width
+$laptop-min: 1024px;
+$laptop-max: 1440px;
+//min-width
+$desktop:1441px; 
