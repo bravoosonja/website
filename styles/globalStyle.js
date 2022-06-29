@@ -46,12 +46,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color:${(props) => props.theme.background};
         font-family: 'Mier', "MurMure", "Manrope", sans-serif;
         display: flex;
-        flex-direction: column;
-        /* justify-content: center;
-        align-items: center; */
-        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-        /* display: flex; */
-      
+        flex-direction: column;  
     }
 
     h1,h2,h3,h4,h5,h6 {

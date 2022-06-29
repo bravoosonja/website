@@ -1,32 +1,38 @@
-import Image from "next/image";
+// import Image from "next/image";
 import styled from "styled-components";
-// components
-import ScrollDown from "./UI/scrollDown";
-// icon
+// icons
 import { IconContext } from "react-icons/lib";
-import { GiLed } from "react-icons/gi";
-// image - gif
-import BannerGif from "../assets/images/typing.gif";
 import { GiBranchArrow } from "react-icons/gi";
+// animation
+import { motion } from "framer-motion";
 
+//variants
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const letter = {
+  initial: { y: 400 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+    },
+  },
+};
 export default function Banner() {
   return (
-    <Wrapper>
-      {/* <IconContext.Provider value={{ color: "#ff6201" }}>
-        <Arrow>
-          <span>Scroll down</span>
-          <ScrollDown />
-        </Arrow>
-      </IconContext.Provider> */}
+    <Wrapper variants={banner}>
       <Content>
         <Left>
           <h2>I enjoy aesthetic, experiences</h2>
         </Left>
-        {/* <h2>aesthetic,</h2> */}
-        {/* <ImageWrapper>
-          <Image src={BannerGif} alt="Typing" width={698} height={568} />
-          <h1>to create aesthetic,</h1>
-        </ImageWrapper> */}
         <Right>
           <h2>
             creating fun user
@@ -45,13 +51,13 @@ export default function Banner() {
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   width: 100%;
   height: 95vh;
   margin-top: 2rem;
 `;
 
-const Content = styled.div`
+const Content = styled(motion.div)`
   padding: 1rem 3rem;
   overflow-wrap: break-word;
   display: flex;
@@ -106,26 +112,5 @@ const Arrow = styled.button`
     &:hover {
       color: ${(props) => props.theme.accent};
     }
-  }
-`;
-
-const ImageWrapper = styled.div`
-  /* width: 80%;
-  margin: 0 auto; */
-  position: relative;
-
-  img {
-    width: 70%;
-    /* z-index: inherit; */
-    /* filter: grayscale(0.8); */
-    /* opacity: 90%; */
-  }
-
-  h1 {
-    color: ${(props) => props.theme.background};
-    position: absolute;
-    top: 0;
-    z-index: 5;
-    mix-blend-mode: hard-light;
   }
 `;

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { motion } from "framer-motion";
 // components
 import About from "../pages/about";
 import Skills from "../pages/skills";
@@ -11,7 +12,10 @@ export default function Home() {
   return (
     <>
       <section>
-        <Banner />
+        <Banner
+          as={motion.div}
+          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+        />
       </section>
       <section>{/* <About /> */}</section>
       <section>

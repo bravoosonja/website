@@ -70,8 +70,7 @@ const Wrapper = styled.div`
   /* width: 100%; */
   padding: 0 3rem;
   h1 {
-    position: relative;
-    left: 20%;
+    /* position: relative; */
     width: min-content;
     font-family: "Murmure";
   }

@@ -5,12 +5,12 @@ import "../styles/fonts.css";
 import styled, { ThemeProvider } from "styled-components";
 // icons
 import { GiMoonBats, GiSun } from "react-icons/gi";
-// context provider
+// context
+import { ThemeContext } from "styled-components";
 import CursorContextProvider from "../context/cursor-context";
 // components
 import Layout from "../components/layout";
-// context
-import { ThemeContext } from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light");
@@ -20,17 +20,19 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
-      <CursorContextProvider>
-        <ThemeContainer onClick={toggleTheme}>
-          {theme === "light" ? <GiMoonBats /> : <GiSun />}
-          <GlobalStyle />
-        </ThemeContainer>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </CursorContextProvider>
-    </ThemeProvider>
+    <AnimatePresence exitBeforeEnter>
+      <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
+        <CursorContextProvider>
+          <ThemeContainer onClick={toggleTheme}>
+            {theme === "light" ? <GiMoonBats /> : <GiSun />}
+            <GlobalStyle />
+          </ThemeContainer>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </CursorContextProvider>
+      </ThemeProvider>
+    </AnimatePresence>
   );
 }
 
