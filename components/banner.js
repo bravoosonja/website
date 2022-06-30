@@ -3,8 +3,6 @@ import styles from "../styles/components/banner.module.scss";
 // icons
 import { IconContext } from "react-icons/lib";
 import { GiBranchArrow } from "react-icons/gi";
-// animation
-import { motion } from "framer-motion";
 // component
 import CustomCursor from "./feature/customCursor";
 
@@ -31,7 +29,7 @@ const letter = {
 export default function Banner() {
   return (
     <>
-      <motion.div className={styles.container} variants={banner}>
+      <div className={styles.container} variants={banner}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
             <h2>I enjoy aesthetic, exper</h2>
@@ -48,7 +46,7 @@ export default function Banner() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 }

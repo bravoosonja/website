@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+
+// styles
 import styles from "../../styles/components/cookie.module.scss";
 
 export default function Cookie({ setShowCookie }) {
+  const containerRef = useRef();
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

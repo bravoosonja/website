@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { motion } from "framer-motion";
 // components
 import CustomCursor from "../components/feature/customCursor";
 import Banner from "../components/banner";
@@ -29,12 +28,12 @@ export default function Home() {
       <section>
         <Skills />
       </section>
-      {/* <section>
+      <section>
         <Projects />
       </section>
       <section>
         <Contact />
-      </section> */}
+      </section>
     </>
   );
 }

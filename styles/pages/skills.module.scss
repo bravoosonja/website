@@ -85,10 +85,18 @@
       z-index: 5;
       display: grid;
       justify-content: center;
+      align-items: center;
       margin: 0;
 
       h1 {
         color: $dark-text;
+      }
+
+      .heart {
+        transform: scale(1.5);
+        position: relative;
+        bottom: 25vh;
+        left: 5vw;
       }
     }
   }
