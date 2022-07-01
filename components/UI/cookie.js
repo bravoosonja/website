@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { gsap } from "gsap";
+import { gsap } from "gsap/dist/gsap";
 // styles
 import styles from "../../styles/components/cookie.module.scss";
 

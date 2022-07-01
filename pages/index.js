@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <section>
         <Banner
           onMouseEnter={() => cursorChangeHandler("banner")}

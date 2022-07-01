@@ -1,6 +1,4 @@
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 // styles
 import styles from "../styles/components/banner.module.scss";
 // icons
@@ -8,11 +6,35 @@ import { IconContext } from "react-icons/lib";
 import { GiBranchArrow } from "react-icons/gi";
 // component
 import CustomCursor from "./feature/customCursor";
+// gsap
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Banner() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const containerRef = useRef();
+  const q = gsap.utils.selector(containerRef.current);
+
+  useEffect(() => {
+    const textReveal = gsap.to(q(".left h2"), {
+      backgroundPositionX: "0%",
+      stagger: 1,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        scrub: 1,
+        start: "top center",
+        end: "bottom top",
+      },
+    });
+    return () => {
+      textReveal.scrollTrigger.kill();
+    };
+  }, []);
+
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} ref={containerRef}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
             <h2>I enjoy aesthetic, exper</h2>
