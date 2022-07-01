@@ -1,33 +1,154 @@
-import { useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 // styles
 import styles from "../styles/components/banner.module.scss";
 // icons
-import { IconContext } from "react-icons/lib";
 import { GiBranchArrow } from "react-icons/gi";
 // component
-import CustomCursor from "./feature/customCursor";
+// import CustomCursor from "./feature/customCursor";
+
+// variants for framer motion
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const letterAni = {
+  initial: { y: 400 },
+  aimate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+    },
+  },
+};
 
 export default function Banner() {
+  const [playMarquee, setPlayMarquee] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPlayMarquee(true);
+    }, 2000);
+  }, []);
+
+  const AnimatedLetters = ({ title, disabled }) => {
+    <motion.h2
+      className={styles.rowTitle}
+      variants={disabled ? null : banner}
+      initial="initial"
+      animate="animate"
+    >
+      {[...title].map((letter) => (
+        <motion.h2
+          className="row-letter"
+          variants={disabled ? null : letterAni}
+        >
+          {letter}
+        </motion.h2>
+      ))}
+    </motion.h2>;
+  };
+
+  const BannerRowTop = ({ title }) => {
+    return (
+      <motion.div
+        className={styles.bannerRowTop}
+        initial={{ opacity: 0, y: 80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          ease: "easeInOut",
+          duration: 1,
+          delay: 0.4,
+        }}
+      >
+        <AnimatedLetters title={title} />
+      </motion.div>
+    );
+  };
+
+  const BannerRowBottom = ({ title }) => {
+    return (
+      <div className={styles.bannerRowBottom}>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 1 }}
+          className={styles.arrow}
+        >
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}
+          ></motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}
+          ></motion.span>
+        </motion.div>
+        <AnimatedLetters title={title} />
+      </div>
+    );
+  };
+
+  const BannerRowCenter = ({ title, playMarquee }) => {
+    return (
+      <div
+        className={`${styles.BannerRowCenter} ${
+          styles.playMarquee && "animate"
+        }`}
+      >
+        <motion.div
+          initial={{ y: 310 }}
+          animate={{ y: 0 }}
+          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
+          className="marquee__inner"
+        >
+          <AnimatedLetters title={title} disabled />
+          <AnimatedLetters title={title} />
+          <AnimatedLetters title={title} disabled />
+          <AnimatedLetters title={title} disabled />
+        </motion.div>
+      </div>
+    );
+  };
+
   return (
     <>
-      <div className={styles.banner} id="container">
+      <motion.div className={styles.banner} variants={banner}>
         <div className={styles.wrapper}>
-          <div className={styles.left}>
-            <h2>I enjoy aesthetic, exper</h2>
+          <div className={styles.bannerRowTop} title={"I enjoy creating"}>
+            <h2>I enjoy creating</h2>
           </div>
-          <div className={styles.right}>
-            <h2> creating fun user iences</h2>
-            <div className={styles.arrow}>
-              <span>Scroll down</span>
-              <IconContext.Provider value={{ color: "#00FF39" }}>
-                <GiBranchArrow />
-                <GiBranchArrow />
-                <GiBranchArrow />
-              </IconContext.Provider>
-            </div>
+          <div
+            className={styles.bannerRowCenter}
+            title={"aesthetic & fun"}
+            playMarquee={playMarquee}
+          >
+            <h2>aesthetic & fun</h2>
+          </div>
+          <div className={styles.bannerRowBottom} title={"user experiences"}>
+            <h2>user experiences</h2>
+          </div>
+          <div className={styles.arrow}>
+            <span>Scroll down</span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

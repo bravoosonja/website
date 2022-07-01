@@ -2,60 +2,62 @@
 
 .banner {
   padding: 3rem;
+  padding-top: 4rem;
   width: 100%;
   height: 100vh;
-  background: $dark-background;
+  background: $banner-background;
   box-sizing: border-box;
+
+  .rowTitle {
+    font-size: 12rem;
+    line-height: 1.4;
+    font-weight: 400;
+  }
 
   .wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
-    font-family: "Manrope";
-    color: $dark-text;
+    color: $dark-gray;
     width: 100%;
+    font-family: "Armouk";
 
-    h2 {
-      font-size: 10rem;
-      line-height: 1.5;
-      font-weight: 800;
-    }
-
-    .left {
-      display: flex;
-      justify-content: center;
-      align-items: right;
+    .bannerRowTop {
       text-align: left;
     }
 
-    .right {
-      display: flex;
-      justify-content: left;
-      align-items: center;
+    .bannerRowCenter {
+      text-align: center;
+    }
+
+    .bannerRowBottom {
       text-align: right;
+    }
 
-      .arrow {
-        font-size: 1rem;
+    .arrow {
+      height: 200px;
+      width: 200px;
+      border-radius: 100%;
+      background: $gray;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      right: 42vw;
+      bottom: 0;
+
+      span {
+        font-family: "Murmure";
+        font-size: 2.5rem;
         position: relative;
-        top: 34vh;
-        right: 50vw;
-        transform: scale(6) rotate(40deg);
-        z-index: 50;
-        // margin: 0 auto;
-        background: transparent;
+        color: $light-text;
+        font-style: italic;
+        color: white;
 
-        span {
-          font-family: "Murmure";
-          font-size: 0.5rem;
-          position: relative;
-          color: $dark-text;
-          font-style: italic;
-
-          &:hover {
-            color: $light-accent;
-          }
+        &:hover {
+          color: $light-accent;
         }
       }
     }

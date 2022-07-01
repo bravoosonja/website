@@ -1,6 +1,7 @@
 import styles from "../styles/pages/about.module.scss";
 // icons
-import { CgArrowLongUpC } from "react-icons/cg";
+import { HiArrowUp } from "react-icons/hi";
+import { IconContext } from "react-icons/lib";
 
 export default function About() {
   return (
@@ -23,9 +24,11 @@ export default function About() {
             <li>Nintendo games</li>
           </ul>
           <div className={styles.arrows}>
-            <CgArrowLongUpC />
-            <CgArrowLongUpC />
-            <CgArrowLongUpC />
+            <IconContext.Provider value={{ color: "hsla(0, 0%, 23%, 0.288)" }}>
+              <HiArrowUp />
+              <HiArrowUp />
+              <HiArrowUp />
+            </IconContext.Provider>
           </div>
         </div>
         <div className={styles.card}>

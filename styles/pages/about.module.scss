@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   padding: 3rem;
-  background-color: $light-background;
+  background-color: $about-background;
 
   .wrapper {
     display: grid;
@@ -14,7 +14,7 @@
 
     .hiddenCard {
       font-family: "Mier";
-      color: $light-background;
+      color: $light-text;
 
       .title {
         position: static;
@@ -23,9 +23,10 @@
         z-index: 5;
         width: min-content;
         margin: 0;
+        color: $about-background;
 
         h1 {
-          color: $light-text;
+          color: $dark-gray;
         }
       }
 
@@ -33,14 +34,20 @@
         font-size: 2rem;
         font-weight: bold;
         margin-top: 2rem;
+        color: $about-background;
+
+        &:hover {
+          color: $light-text;
+        }
 
         li {
           font-size: 1.3rem;
           font-weight: 100;
-        }
+          color: $about-background;
 
-        &:hover {
-          color: $light-text;
+          &:hover {
+            color: $light-text;
+          }
         }
       }
 
@@ -55,20 +62,21 @@
     }
 
     .card {
-      background-color: $light-accent;
+      background-color: hsla(0, 0%, 23%, 0.288);
       padding: 4rem;
       border-radius: 15px;
       .text {
         h4 {
-          font-family: "Manrope";
+          font-family: "Murmure";
           line-height: 1.13;
           font-weight: 600;
-          font-size: 4rem;
+          font-size: 5rem;
           color: white;
+          font-style: italic;
         }
 
         p {
-          font-family: "Mier";
+          font-family: "Manrope";
           font-size: 1.5rem;
           color: white;
         }

@@ -1,7 +1,6 @@
 import styles from "../styles/pages/skills.module.scss";
 // icon
 import { FiArrowUpRight } from "react-icons/fi";
-import { GiHeartburn } from "react-icons/gi";
 
 export default function Skills() {
   return (
@@ -87,9 +86,6 @@ export default function Skills() {
         </div>
         <div className={styles.pageTitle}>
           <h1>Skills</h1>
-          <div className={styles.heart}>
-            <GiHeartburn />
-          </div>
         </div>
       </div>
     </div>
