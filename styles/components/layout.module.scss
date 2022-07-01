@@ -7,13 +7,13 @@
   width: 100%;
   background: $dark-background;
 
-  &__wrapper {
+  &.wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.1rem 3rem;
 
-    &__content {
+    &.content {
       font-family: "Mier";
 
       h4 {
@@ -21,7 +21,7 @@
         color: $dark-text;
       }
 
-      .cookieAcceptCookie {
+      &.acceptCookie {
         color: $dark-text;
         font-size: 1rem;
       }

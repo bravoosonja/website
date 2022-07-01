@@ -11,8 +11,9 @@ import Contact from "../pages/contact";
 import { CursorContext } from "../context/cursor-context";
 
 export default function Home() {
-  // const { cursorType, cursorChangeHandler } = useContext(CursorContext);
+  // custom cursor
   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
+
   return (
     <>
       <CustomCursor />

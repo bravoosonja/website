@@ -1,21 +1,21 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
+
 // context
 import CursorContextProvider, {
   CursorContext,
 } from "../context/cursor-context";
 // components
 import Header from "./header";
-import CustomCursor from "./feature/customCursor";
 import Cookie from "./UI/cookie";
-// hooks
-import useLayoutFetch from "../hooks/useLayoutFetch";
+import CustomCursor from "./feature/customCursor";
 
 export default function Layout({ children }) {
   // const [toggleMenu, setToggleMenu] = useState(false);
   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
-  // const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const { showCookie, setShowCookie } = useLayoutFetch();
+  // exit animation for cookie disclaimer
+
+  const { cookieActive, setCookieActive } = useState(true);
 
   return (
     <CursorContextProvider>
@@ -25,7 +25,14 @@ export default function Layout({ children }) {
         {/* <Theme theme={theme} toggleTheme={toggleTheme} /> */}
       </nav>
       <main>{children}</main>
-      {showCookie && <Cookie setShowCookie={setShowCookie} />}
+      <footer>
+        {cookieActive && (
+          <Cookie
+            cookieActive={cookieActive}
+            setCookieActive={setCookieActive}
+          />
+        )}
+      </footer>
     </CursorContextProvider>
   );
 }

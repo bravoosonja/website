@@ -12,7 +12,8 @@
 
 # Lessons learned
 
-- Server-side rendering for styled components
+- next js file structure
+- Rendering styled components on next js
   -babel plugin
 - Using contexts
 - Using window API for server-side rendering

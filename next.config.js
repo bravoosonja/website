@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
+//sass
 const path = require("path");
 
 module.exports = {

@@ -1,3 +1,6 @@
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 // styles
 import styles from "../styles/components/banner.module.scss";
 // icons
@@ -6,30 +9,10 @@ import { GiBranchArrow } from "react-icons/gi";
 // component
 import CustomCursor from "./feature/customCursor";
 
-//variants
-const banner = {
-  animate: {
-    transition: {
-      delayChildren: 0.4,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const letter = {
-  initial: { y: 400 },
-  animate: {
-    y: 0,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1,
-    },
-  },
-};
 export default function Banner() {
   return (
     <>
-      <div className={styles.container} variants={banner}>
+      <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
             <h2>I enjoy aesthetic, exper</h2>
