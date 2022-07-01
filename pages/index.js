@@ -1,12 +1,12 @@
 import { useContext } from "react";
 // components
-import CustomCursor from "../components/feature/customCursor";
-import Banner from "../components/banner";
+import CustomCursor from "../components/feature/CustomCursor";
+import Banner from "../components/Banner";
 // pages
-import About from "../pages/about";
-import Skills from "../pages/skills";
-import Projects from "../pages/projects";
-import Contact from "../pages/contact";
+import About from "./About";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
 // context
 import { CursorContext } from "../context/cursor-context";
 

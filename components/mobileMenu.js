@@ -1,11 +1,11 @@
-import Link from "next/dist/client/link";
+import Link from "next/link";
 import styled from "styled-components";
 // icon
 import { CgClose } from "react-icons/cg";
 // components
-import CustomCursor from "./feature/customCursor";
+import CustomCursor from "./feature/CustomCursor";
 
-export default function Menu({ toggleMenu, setToggleMenu }) {
+export default function MobileMenu({ toggleMenu, setToggleMenu }) {
   return (
     <>
       {toggleMenu && (

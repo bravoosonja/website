@@ -5,9 +5,9 @@ import CursorContextProvider, {
   CursorContext,
 } from "../context/cursor-context";
 // components
-import Menu from "./menu";
-import Cookie from "./UI/cookie";
-import CustomCursor from "./feature/customCursor";
+import Menu from "./Menu";
+import Cookie from "./UI/Cookie";
+import CustomCursor from "./feature/CustomCursor";
 
 export default function Layout({ children }) {
   // const [toggleMenu, setToggleMenu] = useState(false);
