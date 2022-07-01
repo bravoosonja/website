@@ -5,7 +5,7 @@ import CursorContextProvider, {
   CursorContext,
 } from "../context/cursor-context";
 // components
-import Header from "./header";
+import Menu from "./menu";
 import Cookie from "./UI/cookie";
 import CustomCursor from "./feature/customCursor";
 
@@ -21,7 +21,7 @@ export default function Layout({ children }) {
     <CursorContextProvider>
       <nav>
         {/* <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
-        <Header cursorChangeHandler={cursorChangeHandler("cursor")} />
+        <Menu cursorChangeHandler={cursorChangeHandler("cursor")} />
         {/* <Theme theme={theme} toggleTheme={toggleTheme} /> */}
       </nav>
       <main>{children}</main>

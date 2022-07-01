@@ -38,28 +38,4 @@ const CustomCursor = () => {
   );
 };
 
-// const Cursor = styled.div`
-//   background-color: ${(props) => props.theme.cursor};
-//   height: 150px;
-//   width: 150px;
-//   border-radius: 50%;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   pointer-events: none;
-//   transition: 0.5s cubic-bezier(0.75, -1.17, 0.3, 2.33) transform 0.2s
-//     cubic-bezier(0.75, -1.27, 0.3, 2.33);
-//   z-index: 1;
-//   mix-blend-mode: difference;
-//   content: "";
-
-//   &.seeMore {
-//     content: "See More";
-//     color: ${(props) => props.theme.text};
-//     font-size: 1rem;
-//     /* transition: 0.5s cubic-bezier(0.75, -1.17, 0.3, 2.33) transform 0.2s
-//       cubic-bezier(0.75, -1.27, 0.3, 2.33); */
-//   }
-// `;
-
 export default CustomCursor;

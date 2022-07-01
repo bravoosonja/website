@@ -12,7 +12,7 @@ import { CursorContext } from "../context/cursor-context";
 
 export default function Home() {
   // custom cursor
-  const { cursorType, cursorChangeHandler } = useContext(CursorContext);
+  //const { cursorType, cursorChangeHandler } = useContext(CursorContext);
 
   return (
     <>

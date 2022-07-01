@@ -1,19 +1,19 @@
 @import "../variables.module.scss";
 
-.container {
+.projects {
   height: 100vh;
   width: 100%;
   padding: 3rem;
   background-color: $light-background;
 
-  .wrapper {
+  &__wrapper {
     padding: 3rem;
     height: 100%;
     // display: flex;
     // justify-content: center;
     // align-items: center;
 
-    .title {
+    &__title {
       position: relative;
       left: 5vw;
       font-size: 7rem;

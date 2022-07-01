@@ -1,143 +1,92 @@
-import Link from "next/dist/client/link";
-import styled from "styled-components";
-// icon
-import { CgClose } from "react-icons/cg";
-// components
-import CustomCursor from "./feature/customCursor";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { motion, AnimateSharedLayout } from "framer-motion";
+// styles
+import styles from "../styles/components/menu.module.scss";
 
-export default function Menu({ toggleMenu, setToggleMenu }) {
-  return (
-    <>
-      {toggleMenu && (
-        <>
-          <CustomCursor />
-          <StyledMenu>
-            <Wrapper>
-              <MenuLinks>
-                <CloseIconContainer>
-                  <CgClose onClick={() => setToggleMenu(!toggleMenu)} />
-                </CloseIconContainer>
-                <nav>
-                  <ul>
-                    <li>
-                      <Link href="/about">
-                        <a>About</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/skills">
-                        <a>Skills</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/projects">
-                        <a>Projects</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">
-                        <a>Contact</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-                <Info>
-                  <h3>Info</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    dapibus ultricies velit sed consectetur. Sed sapien ex,
-                    tempor tempor sagittis pharetra, auctor vitae urna. Donec
-                    congue lorem ac magna cursus vehicula. Nulla quis justo nec
-                    orci vehicula venenatis. Phasellus gravida consequat
-                    pretium. Cras ut sodales risus. In vitae ultricies ex.
-                  </p>
-                </Info>
-              </MenuLinks>
-            </Wrapper>
-          </StyledMenu>
-        </>
+const menuItems = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Skills",
+    path: "/skills",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
+
+export default function Menu() {
+  const MenuItem = ({ name, key, selected, link, onClick }) => (
+    <motion.div
+      className={styles.navItem}
+      onClick={onClick}
+      animate={{ opacity: selected ? 1 : 0.5 }}
+    >
+      <Link href={link}>
+        <a key={key}>{name}</a>
+      </Link>
+      {selected && (
+        <motion.div className={styles.underline} layoutId="underline" />
       )}
-    </>
+    </motion.div>
+  );
+
+  const [selected, setSelected] = useState(0);
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
+          <AnimateSharedLayout>
+            {menuItems.map((menuItem, index) => (
+              <MenuItem
+                name={menuItem.name}
+                key={index}
+                selected={selected === index}
+                onClick={() => setSelected(index)}
+                link={menuItem.path}
+              />
+            ))}
+            {/* <div className={styles.navItem}>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link href="/about">
+                <a>About</a>
+              </Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link href="/skills">
+                <a>Skills</a>
+              </Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link href="/projects">
+                <a>Projects</a>
+              </Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link href="/contact">
+                <a>Contact</a>
+              </Link>
+            </div> */}
+          </AnimateSharedLayout>
+        </div>
+      </div>
+    </div>
   );
 }
-
-const StyledMenu = styled.div`
-  color: ${(props) => props.theme.background};
-  background: ${(props) => props.theme.background};
-  z-index: 9;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  padding: 8rem 5rem;
-  cursor: pointer !important;
-`;
-
-const Wrapper = styled.div`
-  position: relative;
-`;
-
-const MenuLinks = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  nav {
-    display: block;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-    font-size: 6rem;
-    font-weight: 700;
-    cursor: pointer;
-    height: 15vh;
-    overflow: hidden;
-    position: relative;
-    width: 30vw;
-  }
-
-  a {
-    position: absolute;
-    color: ${(props) => props.theme.text};
-    text-decoration: none;
-
-    &:hover {
-      color: ${(props) => props.theme.accent};
-      cursor: pointer !important;
-    }
-  }
-`;
-
-const Info = styled.div`
-  color: ${(props) => props.theme.text};
-  width: 30vw;
-
-  h3 {
-    font-family: "Murmure";
-  }
-
-  p {
-    margin: 0 auto;
-  }
-`;
-
-const CloseIconContainer = styled.div`
-  color: ${(props) => props.theme.text};
-  font-size: 2rem;
-  position: relative;
-  padding: 1rem;
-  cursor: pointer !important;
-
-  &:hover {
-    color: ${(props) => props.theme.accent};
-    cursor: pointer !important;
-  }
-`;

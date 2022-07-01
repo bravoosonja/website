@@ -28,19 +28,32 @@
         // color: white;
         backdrop-filter: blur(2em);
         padding: 1rem;
-        border-radius: 15px;
+        border-radius: 8px;
         font-weight: bold;
         text-transform: uppercase;
         background-color: $light-blur;
         margin-left: 2em;
-        z-index: 5;
+        z-index: 10;
 
         a {
           color: $dark-text;
+          font-size: 1rem;
+          font-family: "Manrope";
         }
         &:hover {
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+          background: linear-gradient(220.55deg, #565656 0%, #181818 100%);
         }
+      }
+
+      .underline {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 15px;
+        background: white;
+        opacity: 0.85;
       }
     }
   }
