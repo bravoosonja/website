@@ -56,7 +56,7 @@ export default function AnimatedTitle({ textToAnimate }) {
             animate={animatedText}
             variants={wordAnimation}
             transition={{
-              delayChildren: index * 0.05,
+              delayChildren: index * 0.06,
               staggerChildren: 0.2,
             }}
           >

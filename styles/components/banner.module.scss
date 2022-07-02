@@ -35,7 +35,7 @@
       text-align: right;
     }
 
-    .arrow {
+    .scrollDown {
       height: 200px;
       width: 200px;
       border-radius: 100%;
@@ -45,8 +45,8 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      right: 42vw;
-      bottom: 0;
+      right: 40vw;
+      bottom: 17vh;
 
       span {
         font-family: "Murmure";
