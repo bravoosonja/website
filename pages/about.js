@@ -2,6 +2,8 @@ import styles from "../styles/pages/about.module.scss";
 // icons
 import { HiArrowUp } from "react-icons/hi";
 import { IconContext } from "react-icons/lib";
+// components
+import AnimatedTitle from "../components/feature/AnimatedTitle";
 
 export default function About() {
   return (
@@ -9,7 +11,7 @@ export default function About() {
       <div className={styles.wrapper}>
         <div className={styles.hiddenCard}>
           <div className={styles.title}>
-            <h1>About</h1>
+            <AnimatedTitle textToAnimate={"About"} />
           </div>
           <ul>
             My latest obsessions

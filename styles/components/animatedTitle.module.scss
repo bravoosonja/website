@@ -1,4 +1,19 @@
 @import "../variables.module.scss";
 
 .animatedTitle {
+  .title {
+    font-size: 3rem;
+    font-weight: 600;
+
+    .word {
+      display: inline-block;
+      margin-right: 0.25em;
+      white-space: nowrap;
+
+      .character {
+        display: inline-block;
+        margin-right: -0.05;
+      }
+    }
+  }
 }

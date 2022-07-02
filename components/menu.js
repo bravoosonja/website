@@ -11,19 +11,19 @@ const menuItems = [
   },
   {
     name: "About",
-    path: "/about",
+    path: "/About",
   },
   {
     name: "Skills",
-    path: "/skills",
+    path: "/Skills",
   },
   {
     name: "Projects",
-    path: "/projects",
+    path: "/Projects",
   },
   {
     name: "Contact",
-    path: "/contact",
+    path: "/Contact",
   },
 ];
 

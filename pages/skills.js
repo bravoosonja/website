@@ -1,6 +1,8 @@
 import styles from "../styles/pages/skills.module.scss";
 // icon
 import { FiArrowUpRight } from "react-icons/fi";
+// components
+import AnimatedTitle from "../components/feature/AnimatedTitle";
 
 export default function Skills() {
   return (
@@ -85,7 +87,7 @@ export default function Skills() {
           </div>
         </div>
         <div className={styles.pageTitle}>
-          <h1>Skills</h1>
+          <AnimatedTitle textToAnimate={"Skills"} />
         </div>
       </div>
     </div>

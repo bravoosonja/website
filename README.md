@@ -1,5 +1,7 @@
 # Overview
 
+The aim of this project is to learn Next JS framework and showcase react skills.
+
 ## Features
 
 - Responsive design
