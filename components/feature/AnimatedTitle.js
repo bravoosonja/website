@@ -10,8 +10,8 @@ export default function AnimatedTitle({ textToAnimate }) {
   const animatedText = useAnimation();
 
   const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
+    threshold: 0.35,
+    triggerOnce: false,
   });
 
   useEffect(() => {

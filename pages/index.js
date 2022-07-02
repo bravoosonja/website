@@ -17,12 +17,9 @@ export default function Home() {
   return (
     <>
       {/* <CustomCursor /> */}
-      {/* <section>
-        <Banner
-          onMouseEnter={() => cursorChangeHandler("banner")}
-          onMouseLeave={() => cursorChangeHandler("")}
-        />
-      </section> */}
+      <section>
+        <Banner />
+      </section>
       <section>
         <About />
       </section>
