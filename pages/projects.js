@@ -21,12 +21,14 @@ export default function Projects() {
                 src={projectItem.path}
                 alt={projectItem.name}
                 objectFit="cover"
-                width={500}
-                height={600}
+                width={1919}
+                height={946}
               />
               <div className={styles.text}>
                 <h4>{projectItem.name}</h4>
-                <h5>{projectItem.skills}</h5>
+                <div className={styles.skills}>
+                  <h5>{projectItem.skills}</h5>
+                </div>
                 <p>{projectItem.info}</p>
               </div>
             </>

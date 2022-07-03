@@ -46,8 +46,12 @@
           font-size: 3rem;
         }
 
-        h5 {
-          font-size: 2rem;
+        .skills {
+          background-color: $gray;
+          h5 {
+            font-size: 1.5rem;
+            color: white;
+          }
         }
 
         p {
