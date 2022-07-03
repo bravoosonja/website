@@ -38,31 +38,6 @@ export default function Menu() {
                 link={menuItem.path}
               />
             ))}
-            {/* <div className={styles.navItem}>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link href="/skills">
-                <a>Skills</a>
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link href="/projects">
-                <a>Projects</a>
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
-            </div> */}
           </AnimateSharedLayout>
         </div>
       </div>

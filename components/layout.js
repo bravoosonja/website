@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-
+import { useContext, useState, useRef } from "react";
 // context
 import CursorContextProvider, {
   CursorContext,
@@ -14,7 +13,6 @@ export default function Layout({ children }) {
   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
 
   // exit animation for cookie disclaimer
-
   const { cookieActive, setCookieActive } = useState(true);
 
   return (
@@ -24,7 +22,7 @@ export default function Layout({ children }) {
         <Menu cursorChangeHandler={cursorChangeHandler("cursor")} />
         {/* <Theme theme={theme} toggleTheme={toggleTheme} /> */}
       </nav>
-      <main>{children}</main>
+      {children}
       <footer>
         {cookieActive && (
           <Cookie
