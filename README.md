@@ -6,11 +6,17 @@ The aim of this project is to learn Next JS framework and showcase react skills.
 
 - Responsive design
 - Custom cursor
-- Locomotive scroll
+- Animation fires on scroll
 
 ## Demo
 
 # Skills used
+
+- React
+- Next JS
+- SASS
+- Framer Motion
+- Intersection observer
 
 # Lessons learned
 
@@ -20,3 +26,4 @@ The aim of this project is to learn Next JS framework and showcase react skills.
 - Using contexts
 - Using window API for server-side rendering
   - to get `window.innerWidth` and `window.innerHeight` for customer cursor
+- Animation effects using Framer Motion

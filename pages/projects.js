@@ -3,6 +3,8 @@ import { useRef, useEffect } from "react";
 import styles from "../styles/pages/projects.module.scss";
 // components
 import AnimatedTitle from "../components/feature/AnimatedTitle";
+// data
+import projectItems from "../data/projectItems";
 
 export default function Projects() {
   return (

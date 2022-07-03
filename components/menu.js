@@ -3,29 +3,8 @@ import Link from "next/link";
 import { motion, AnimateSharedLayout } from "framer-motion";
 // styles
 import styles from "../styles/components/menu.module.scss";
-
-const menuItems = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "About",
-    path: "/About",
-  },
-  {
-    name: "Skills",
-    path: "/Skills",
-  },
-  {
-    name: "Projects",
-    path: "/Projects",
-  },
-  {
-    name: "Contact",
-    path: "/Contact",
-  },
-];
+// data
+import { menuItems } from "../data/menuItems";
 
 export default function Menu() {
   const MenuItem = ({ name, key, selected, link, onClick }) => (
