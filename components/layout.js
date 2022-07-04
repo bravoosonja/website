@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from "react";
+import { useContext, useState, useEffect } from "react";
 // context
 import CursorContextProvider, {
   CursorContext,
@@ -22,7 +22,7 @@ export default function Layout({ children }) {
         <Menu cursorChangeHandler={cursorChangeHandler("cursor")} />
         {/* <Theme theme={theme} toggleTheme={toggleTheme} /> */}
       </nav>
-      {children}
+      <main>{children}</main>
       <footer>
         {cookieActive && (
           <Cookie

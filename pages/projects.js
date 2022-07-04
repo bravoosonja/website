@@ -1,3 +1,6 @@
+//TODO: Horizontal scroll
+//TODO: Separate each skill
+import { useEffect } from "react";
 import Image from "next/image";
 // styles
 import styles from "../styles/pages/projects.module.scss";
@@ -5,15 +8,46 @@ import styles from "../styles/pages/projects.module.scss";
 import AnimatedTitle from "../components/feature/AnimatedTitle";
 // data
 import { projectItems } from "../data/projectItems";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
+  useEffect(() => {
+    const sections = gsap.utils.selector("#content");
+    sections("#content").map((items, i) => {
+      ScrollTrigger.create({
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        trigger: "#wrapper",
+        pin: true,
+        scrub: 1,
+        snap: 1 / (sections.length - 1),
+        end: () => "+=" + document.querySelector("#projects").offsetWidth,
+      });
+    });
+
+    // gsap.to(sections, {
+    //   xPercent: -100 * (sections.length - 1),
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: "#wrapper",
+    //     pin: true,
+    //     scrub: 1,
+    //     snap: 1 / (sections.length - 1),
+    //     end: () => "+=" + document.querySelector("#projects").offsetWidth,
+    //   },
+    // });
+  }, []);
+
   return (
-    <div className={styles.projects}>
-      <div className={styles.wrapper}>
+    <div className={styles.projects} id="projects">
+      <div className={styles.wrapper} id="wrapper">
         <div className={styles.title}>
           <AnimatedTitle textToAnimate={"Projects"} />
         </div>
-        <div className={styles.content}>
+        <div className={styles.content} id="content">
           {projectItems.map((projectItem) => (
             <>
               <Image
