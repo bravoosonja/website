@@ -1,5 +1,6 @@
-//TODO: Horizontal scroll
 //TODO: Separate each skill
+//TODO: Menu bar
+
 import { useEffect } from "react";
 import Image from "next/image";
 // styles
@@ -10,35 +11,28 @@ import AnimatedTitle from "../components/feature/AnimatedTitle";
 import { projectItems } from "../data/projectItems";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+//import useWindowSize from "../hooks/useWindowSize";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   useEffect(() => {
-    const sections = gsap.utils.selector("#content");
-    sections("#content").map((items, i) => {
-      ScrollTrigger.create({
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sections = gsap.utils.toArray("#content");
+
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
         trigger: "#projects",
         pin: true,
-        scrub: 1,
-        snap: 1 / (sections.length - 1),
-        end: () => "+=" + document.querySelector("#content").offsetWidth,
-      });
+        scrub: true,
+        // snap: 1 / (sections.length - 1),
+        // base vertical scrolling on how wide the container is so it feels more natural.
+        end: () => "+=" + document.querySelector("#contents").offsetWidth,
+      },
     });
-
-    // gsap.to(sections, {
-    //   xPercent: -100 * (sections.length - 1),
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: "#wrapper",
-    //     pin: true,
-    //     scrub: 1,
-    //     snap: 1 / (sections.length - 1),
-    //     end: () => "+=" + document.querySelector("#projects").offsetWidth,
-    //   },
-    // });
   }, []);
 
   return (
@@ -47,9 +41,9 @@ export default function Projects() {
         <div className={styles.title}>
           <AnimatedTitle textToAnimate={"Projects"} />
         </div>
-        <div className={styles.content} id="content">
+        <div className={styles.content} id="contents">
           {projectItems.map((projectItem) => (
-            <>
+            <div id="content">
               <Image
                 key={projectItem.key}
                 src={projectItem.path}
@@ -65,7 +59,7 @@ export default function Projects() {
                 </div>
                 <p>{projectItem.info}</p>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>

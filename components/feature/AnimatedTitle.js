@@ -1,3 +1,5 @@
+//TODO: Replace intersection observer with ScrollTrigger?
+
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
