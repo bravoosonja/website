@@ -1,4 +1,5 @@
 //TODO: add link
+//TODO: change appearing text on hover to cursor
 
 // styles
 import styles from "../styles/pages/contact.module.scss";
@@ -7,8 +8,30 @@ import AnimatedTitle from "../components/feature/AnimatedTitle";
 // icons
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import { motion } from "framer-motion";
+
+// animation variant
+const copy = {
+  init: {
+    y: 0,
+    opacity: 0,
+  },
+  animate: {
+    y: -10,
+    opacity: 1,
+    transition: {
+      ease: "ease-in",
+      repeat: 1,
+      repeatType: "reverse",
+      type: "tween",
+    },
+  },
+};
 
 export default function Contact() {
+  function copyToClipboard() {
+    navigator.clipboard.writeText("songnachoi@gmail.com");
+  }
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -29,6 +52,16 @@ export default function Contact() {
               Feel free to reach out for collaboration opportunities or simply
               for a chat!
             </p>
+            <div className={styles.email}>
+              <button
+                onClick={() => {
+                  copyToClipboard();
+                }}
+              >
+                <h2>songnachoi@gmail.com</h2>
+              </button>
+              <div className={styles.copy}>Click to copy to clipboard</div>
+            </div>
           </div>
         </div>
       </div>
