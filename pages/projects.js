@@ -20,11 +20,11 @@ export default function Projects() {
       ScrollTrigger.create({
         xPercent: -100 * (sections.length - 1),
         ease: "none",
-        trigger: "#wrapper",
+        trigger: "#projects",
         pin: true,
         scrub: 1,
         snap: 1 / (sections.length - 1),
-        end: () => "+=" + document.querySelector("#projects").offsetWidth,
+        end: () => "+=" + document.querySelector("#content").offsetWidth,
       });
     });
 
