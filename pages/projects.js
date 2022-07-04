@@ -41,16 +41,16 @@ export default function Projects() {
         <div className={styles.title}>
           <AnimatedTitle textToAnimate={"Projects"} />
         </div>
-        <div className={styles.content} id="contents">
+        <div className={styles.contents} id="contents">
           {projectItems.map((projectItem) => (
-            <div id="content">
+            <div className={styles.content} id="content">
               <Image
                 key={projectItem.key}
                 src={projectItem.path}
                 alt={projectItem.name}
                 objectFit="cover"
-                width={1919}
-                height={946}
+                width={1920}
+                height={929}
               />
               <div className={styles.text}>
                 <h4>{projectItem.name}</h4>

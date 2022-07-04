@@ -3,7 +3,6 @@
 .projects {
   height: 100vh;
   width: 100vw;
-  padding: 3rem;
   background-color: $projects-background;
   color: $dark-gray;
 
@@ -14,7 +13,7 @@
 
     .title {
       position: absolute;
-      top: -3vh;
+      top: 0;
       // left: 5vw;
       font-size: 7rem;
       z-index: 5;
@@ -26,48 +25,49 @@
       }
     }
 
-    .content {
-      width: 600%;
+    .contents {
+      width: 500%;
       height: 100%;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       // flex-wrap: nowrap;
       overflow-x: hidden;
       z-index: 20;
       box-sizing: border-box;
+      padding-top: 1rem;
 
-      img {
-        width: 100%;
-        display: block;
-        opacity: 0.9;
-        filter: grayscale(0.4);
-      }
+      .content {
+        margin: 1rem;
 
-      .text {
-        position: relative;
-        bottom: 40vh;
-        color: $dark-gray;
-        font-family: "Mier";
-
-        h4 {
-          font-size: 3rem;
-          color: $dark-gray;
+        img {
+          width: 100%;
+          display: block;
+          filter: grayscale(0.4);
         }
 
-        .skills {
-          background-color: $gray;
-          h5 {
-            font-size: 1.5rem;
-            color: white;
+        .text {
+          position: absolute;
+          top: 80%;
+          font-family: "Mier";
+
+          h4 {
+            font-size: 3rem;
+            color: $dark-gray;
+          }
+
+          .skills {
+            background-color: $gray;
+
+            h5 {
+              font-size: 1.5rem;
+              color: white;
+            }
+          }
+
+          p {
           }
         }
-
-        p {
-        }
-      }
-
-      .anchor {
       }
     }
   }
