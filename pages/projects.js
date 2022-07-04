@@ -60,7 +60,11 @@ export default function Projects() {
               <div className={styles.text}>
                 <h4>{projectItem.name}</h4>
                 <div className={styles.skills}>
-                  <h5>{projectItem.skills}</h5>
+                  {projectItem.skills.map((skill) => (
+                    <div className={styles.skill}>
+                      <h5>{skill}</h5>
+                    </div>
+                  ))}
                 </div>
                 <p>{projectItem.info}</p>
                 <div className={styles.icons}>
