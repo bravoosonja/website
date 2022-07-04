@@ -4,6 +4,8 @@ export const projectItems = [
     skills: ["React", "Styled Components"],
     info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
     path: "/project1_l.png",
+    github: "https://github.com/bravoosonja/shopping-cart",
+    live: "https://regal-faun-bcff09.netlify.app/",
     key: 1,
   },
   {
@@ -11,6 +13,8 @@ export const projectItems = [
     skills: ["React", "Styled Components"],
     info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
     path: "/project2_l.png",
+    github: "https://github.com/bravoosonja/movie-app",
+    live: "https://master--bright-parfait-e0cd13.netlify.app/",
     key: 2,
   },
   {
@@ -18,6 +22,8 @@ export const projectItems = [
     skills: ["React", "Styled Components"],
     info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
     path: "/project3_l.png",
+    github: "https://github.com/bravoosonja/huddle",
+    live: "https://main--transcendent-marzipan-da48af.netlify.app/",
     key: 3,
   },
   {
@@ -25,6 +31,8 @@ export const projectItems = [
     skills: ["Vanilla JavaScript", "HTML", "CSS"],
     info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
     path: "/project4_l.png",
+    github: "https://github.com/bravoosonja/calculator",
+    live: "https://bravoosonja.github.io/calculator/",
     key: 4,
   },
   {
@@ -32,6 +40,8 @@ export const projectItems = [
     skills: ["Vanilla JavaScript", "HTML", "CSS"],
     info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
     path: "/project5_l.png",
+    github: "https://github.com/bravoosonja/library",
+    live: "https://bravoosonja.github.io/library/",
     key: 5,
   },
   {
@@ -39,6 +49,8 @@ export const projectItems = [
     skills: ["Vanilla JavaScript", "HTML", "CSS"],
     info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
     path: "/project6_l.png",
+    github: "https://github.com/bravoosonja/etchasketch",
+    live: "https://bravoosonja.github.io/etchasketch/",
     key: 6,
   },
 ];

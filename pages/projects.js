@@ -1,17 +1,19 @@
-//TODO: Separate each skill
 //TODO: Menu bar
 
 import { useEffect } from "react";
 import Image from "next/image";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // styles
 import styles from "../styles/pages/projects.module.scss";
 // components
 import AnimatedTitle from "../components/feature/AnimatedTitle";
 // data
 import { projectItems } from "../data/projectItems";
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-//import useWindowSize from "../hooks/useWindowSize";
+// icons
+import { FaGithub } from "react-icons/fa";
+import { RiExternalLinkLine } from "react-icons/ri";
+import { IconContext } from "react-icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,23 +46,45 @@ export default function Projects() {
         <div className={styles.contents} id="contents">
           {projectItems.map((projectItem) => (
             <div className={styles.content} id="content">
-              <Image
-                key={projectItem.key}
-                src={projectItem.path}
-                alt={projectItem.name}
-                objectFit="cover"
-                width={1920}
-                height={929}
-              />
+              <div className={styles.image}>
+                <Image
+                  key={projectItem.key}
+                  src={projectItem.path}
+                  alt={projectItem.name}
+                  objectFit="cover"
+                  width={1920}
+                  height={929}
+                />
+                <div className={styles.overlay}></div>
+              </div>
               <div className={styles.text}>
                 <h4>{projectItem.name}</h4>
                 <div className={styles.skills}>
                   <h5>{projectItem.skills}</h5>
                 </div>
                 <p>{projectItem.info}</p>
+                <div className={styles.icons}>
+                  <IconContext.Provider value={{ color: "white" }}>
+                    <a
+                      target="_blank"
+                      href={projectItem.github}
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub />
+                    </a>
+                    <a
+                      target="_blank"
+                      href={projectItem.live}
+                      rel="noopener noreferrer"
+                    >
+                      <RiExternalLinkLine />
+                    </a>
+                  </IconContext.Provider>
+                </div>
               </div>
             </div>
           ))}
+          <div className={styles.icon}></div>
         </div>
       </div>
     </div>
