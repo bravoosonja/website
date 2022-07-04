@@ -1,6 +1,9 @@
-//TODO: add link
+//TODO: add link to icons
 //TODO: change appearing text on hover to cursor
+//TODO: add animation for hover
+//TODO: change text when copied
 
+import { useState } from "react";
 // styles
 import styles from "../styles/pages/contact.module.scss";
 // components
@@ -32,6 +35,7 @@ export default function Contact() {
   function copyToClipboard() {
     navigator.clipboard.writeText("songnachoi@gmail.com");
   }
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
