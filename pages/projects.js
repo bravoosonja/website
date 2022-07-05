@@ -1,4 +1,5 @@
 //TODO: Menu bar
+//TODO: Change icon links to buttons
 
 import { useEffect } from "react";
 import Image from "next/image";

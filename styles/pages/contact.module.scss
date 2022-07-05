@@ -35,12 +35,20 @@
       }
 
       .icons {
-        width: 10vw;
-        font-size: 2rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        margin-top: 5vh;
+        flex-direction: row;
+
+        button {
+          width: 10vw;
+          font-size: 2rem;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 5vh;
+          background: none;
+        }
       }
     }
 
@@ -67,33 +75,47 @@
           align-items: flex-start;
           flex-direction: column;
 
-          .copy {
-            display: none;
-          }
-
           button {
             line-height: 1;
             background: none;
             color: gray;
+            font-family: "Mier";
+            font-size: 2.5rem;
 
-            &:hover {
-              color: white;
-              border-bottom: 1px solid white;
+            .underline {
+              background-image: linear-gradient(
+                -20deg,
+                #e9defa 0%,
+                #fbfcdb 100%
+              );
+              background-repeat: no-repeat;
+              background-size: 100% 0.2em;
+              background-position: 0 88%;
+              transition: background-size 0.2s ease-in;
+
+              &:hover {
+                background-size: 100% 88%;
+              }
             }
 
-            &:hover + .copy {
-              display: block;
-              background-color: $gray;
-              border-radius: 15px;
-              margin-top: 1rem;
-              color: white;
-              font-size: 1rem;
+            .copyText {
+              position: relative;
+              top: 1vh;
+              color: black;
               padding: 1rem;
-            }
+              font-size: 1rem;
 
-            h2 {
-              font-family: "Mier";
-              font-size: 2.5rem;
+              &:hover {
+                opacity: 1;
+                top: -30px;
+                left: 0;
+                width: 100%;
+                height: 275%;
+
+                &::after {
+                  content: "Copied!";
+                }
+              }
             }
           }
         }

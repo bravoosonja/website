@@ -1,9 +1,7 @@
-//TODO: add link to icons
-//TODO: change appearing text on hover to cursor
-//TODO: add animation for hover
 //TODO: change text when copied
 
 import { useState, useContext } from "react";
+import { motion } from "framer-motion";
 // styles
 import styles from "../styles/pages/contact.module.scss";
 // components
@@ -11,7 +9,6 @@ import AnimatedTitle from "../components/feature/AnimatedTitle";
 // icons
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { motion } from "framer-motion";
 // context
 import { CursorContext } from "../context/cursor-context";
 
@@ -34,11 +31,11 @@ const copy = {
 };
 
 export default function Contact() {
-  const { cursorType, cursorChangeHandler } = useContext(CursorContext);
-
   function copyToClipboard() {
     navigator.clipboard.writeText("songnachoi@gmail.com");
   }
+
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -49,8 +46,24 @@ export default function Contact() {
           </div>
           <div className={styles.icons}>
             <IconContext.Provider value={{ color: "white" }}>
-              <FaGithub className={styles.github} />
-              <FaLinkedin className={styles.linkedin} />
+              <button>
+                <a
+                  target="_blank"
+                  href="https://github.com/bravoosonja"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub className={styles.github} />
+                </a>
+              </button>
+              <button>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/songna-c"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin className={styles.linkedin} />
+                </a>
+              </button>
             </IconContext.Provider>
           </div>
         </div>
@@ -60,19 +73,34 @@ export default function Contact() {
               Feel free to reach out for collaboration opportunities or simply
               for a chat!
             </p>
-            <div
-              className={styles.email}
-              onMouseEnter={() => cursorChangeHandler("hovered")}
-              onMouseLeave={() => cursorChangeHandler("cursor")}
-            >
+            <div className={styles.email}>
               <button
                 onClick={() => {
                   copyToClipboard();
                 }}
               >
-                <h2>songnachoi@gmail.com</h2>
+                <motion.span
+                  className={styles.underline}
+                  onMouseOver={() => setIsHovered(true)}
+                  onMouseOut={() => setIsHovered(false)}
+                >
+                  songnachoi@gmail.com
+                </motion.span>
+                <motion.div
+                  className={styles.copyText}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{
+                    opacity: isHovered ? "1" : "0",
+                    x: isHovered ? "0" : "50",
+                  }}
+                  transition={{
+                    duration: isHovered ? "0.7" : "0.7",
+                    ease: [0.2, 0.65, 0.3, 0.9],
+                  }}
+                >
+                  Click to copy to clipboard
+                </motion.div>
               </button>
-              <div className={styles.copy}>Click to copy to clipboard</div>
             </div>
           </div>
         </div>
