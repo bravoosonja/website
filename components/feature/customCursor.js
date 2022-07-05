@@ -1,4 +1,5 @@
-import { useRef, useEffect, useContext } from "react";
+import { useRef, useEffect, useContext, useState } from "react";
+import { motion } from "framer-motion";
 // context
 import { CursorContext } from "../../context/cursor-context";
 // style
@@ -6,36 +7,87 @@ import styles from "../../styles/components/customCursor.module.scss";
 // hooks
 import useWindowSize from "../../hooks/useWindowSize";
 
-const CustomCursor = () => {
-  // to get current mouse position
-  const cursor = useRef(null);
-
-  // to customize cursor
-  const { cursorType, cursorChangeHandler } = useContext(CursorContext);
-  const { width, height } = useWindowSize();
-
-  const onMouseMove = (event) => {
-    const { clientX, clientY } = event;
-    const x = clientX / width;
-    const y = clientY / height;
-
-    cursor.current.style = cursorType;
-    cursor.current.style.left = `${x}px`;
-    cursor.current.style.top = `${y}px`;
-  };
+export default function CustomCursor() {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setCursorVariant] = useState("default");
 
   useEffect(() => {
-    document.addEventListener("mousemove", onMouseMove);
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
     return () => {
-      document.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mousemove", mouseMove);
     };
   }, []);
 
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+    text: {
+      height: 150,
+      width: 150,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: "yellow",
+      mixBlendMode: "difference",
+    },
+  };
+
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
+
   return (
     <>
-      <div className={cursorType} ref={cursor} />
+      <motion.div
+        className={styles.cursor}
+        variants={variants}
+        animate={cursorVariant}
+      />
     </>
   );
-};
+}
 
-export default CustomCursor;
+// const CustomCursor = () => {
+//   // to get current mouse position
+//   const cursor = useRef(null);
+
+//   // to customize cursor
+//   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
+//   const { width, height } = useWindowSize();
+
+//   const onMouseMove = (event) => {
+//     const { clientX, clientY } = event;
+//     const x = clientX / width;
+//     const y = clientY / height;
+
+//     cursor.current.style = cursorType;
+//     cursor.current.style.left = `${x}px`;
+//     cursor.current.style.top = `${y}px`;
+//   };
+
+//   useEffect(() => {
+//     document.addEventListener("mousemove", onMouseMove);
+//     return () => {
+//       document.removeEventListener("mousemove", onMouseMove);
+//     };
+//   }, []);
+
+//   return (
+//     <>
+//       <div className={styles.cursor} ref={cursor} />
+//     </>
+//   );
+// };
+
+// export default CustomCursor;

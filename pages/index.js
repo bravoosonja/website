@@ -6,7 +6,7 @@ import Banner from "../components/Banner";
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import Contact from "./contact/Contact/Contact";
+import Contact from "./Contact";
 // context
 import { CursorContext } from "../context/cursor-context";
 import { gsap } from "gsap/dist/gsap";
@@ -14,13 +14,13 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Home() {
   // custom cursor
-  //const { cursorType, cursorChangeHandler } = useContext(CursorContext);
+  const { cursorType, cursorChangeHandler } = useContext(CursorContext);
 
-  gsap.registerPlugin(ScrollTrigger);
+  //gsap.registerPlugin(ScrollTrigger);
 
   return (
     <>
-      {/* <CustomCursor /> */}
+      <CustomCursor />
       <section>
         <Banner />
       </section>
@@ -31,7 +31,10 @@ export default function Home() {
         <Skills />
       </section>
       <section>
-        <Projects />
+        <Projects
+          onMouseEnter={() => cursorChangeHandler("seeMore")}
+          onMouseLeave={() => cursorChangeHandler("")}
+        />
       </section>
       <section>
         <Contact />

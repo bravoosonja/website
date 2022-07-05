@@ -7,7 +7,7 @@ import { useState } from "react";
 // styles
 import styles from "../styles/pages/contact.module.scss";
 // components
-import AnimatedTitle from "../../components/feature/AnimatedTitletle";
+import AnimatedTitle from "../components/feature/AnimatedTitle";
 // icons
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
@@ -45,8 +45,8 @@ export default function Contact() {
           </div>
           <div className={styles.icons}>
             <IconContext.Provider value={{ color: "white" }}>
-              <FaGithub />
-              <FaLinkedin />
+              <FaGithub className={styles.github} />
+              <FaLinkedin className={styles.linkedin} />
             </IconContext.Provider>
           </div>
         </div>

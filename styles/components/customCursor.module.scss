@@ -1,7 +1,7 @@
 @import "../variables.module.scss";
 
 .cursor {
-  background-color: $dark-accent;
+  background-color: $cursor;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -10,7 +10,12 @@
   left: 0;
   pointer-events: none;
   z-index: 1;
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
+
+  &.seeMore {
+    content: "SEE MORE";
+    font-family: "Mier";
+  }
 }
 
 .banner {
