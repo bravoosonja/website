@@ -23,7 +23,10 @@ export default function Home() {
   return (
     <CursorContextProvider>
       <section>
-        <Banner />
+        <Banner
+          onMouseEnter={() => cursorChangeHandler("hovered")}
+          onMouseLeave={() => cursorChangeHandler("cursor")}
+        />
       </section>
       <section>
         <About />
@@ -33,8 +36,8 @@ export default function Home() {
       </section>
       <section>
         <Projects
-          onMouseEnter={() => cursorChangeHandler("seeMore")}
-          onMouseLeave={() => cursorChangeHandler("")}
+        // onMouseEnter={() => cursorChangeHandler("seeMore")}
+        // onMouseLeave={() => cursorChangeHandler("cursor")}
         />
       </section>
       <section>

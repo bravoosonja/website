@@ -19,8 +19,7 @@ export default function Layout({ children }) {
     <>
       <nav>
         {/* <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
-        <Menu cursorChangeHandler={cursorChangeHandler("cursor")} />
-        {/* <Theme theme={theme} toggleTheme={toggleTheme} /> */}
+        <Menu />
       </nav>
       <main>{children}</main>
       <footer>

@@ -3,7 +3,7 @@
 //TODO: add animation for hover
 //TODO: change text when copied
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 // styles
 import styles from "../styles/pages/contact.module.scss";
 // components
@@ -12,6 +12,8 @@ import AnimatedTitle from "../components/feature/AnimatedTitle";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { motion } from "framer-motion";
+// context
+import { CursorContext } from "../context/cursor-context";
 
 // animation variant
 const copy = {
@@ -32,6 +34,8 @@ const copy = {
 };
 
 export default function Contact() {
+  const { cursorType, cursorChangeHandler } = useContext(CursorContext);
+
   function copyToClipboard() {
     navigator.clipboard.writeText("songnachoi@gmail.com");
   }
@@ -56,7 +60,11 @@ export default function Contact() {
               Feel free to reach out for collaboration opportunities or simply
               for a chat!
             </p>
-            <div className={styles.email}>
+            <div
+              className={styles.email}
+              onMouseEnter={() => cursorChangeHandler("hovered")}
+              onMouseLeave={() => cursorChangeHandler("cursor")}
+            >
               <button
                 onClick={() => {
                   copyToClipboard();
