@@ -8,7 +8,9 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 // context
-import { CursorContext } from "../context/cursor-context";
+import CursorContextProvider, {
+  CursorContext,
+} from "../context/cursor-context";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -19,8 +21,7 @@ export default function Home() {
   //gsap.registerPlugin(ScrollTrigger);
 
   return (
-    <>
-      <CustomCursor />
+    <CursorContextProvider>
       <section>
         <Banner />
       </section>
@@ -39,6 +40,6 @@ export default function Home() {
       <section>
         <Contact />
       </section>
-    </>
+    </CursorContextProvider>
   );
 }

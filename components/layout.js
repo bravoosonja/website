@@ -16,7 +16,7 @@ export default function Layout({ children }) {
   const { cookieActive, setCookieActive } = useState(true);
 
   return (
-    <CursorContextProvider>
+    <>
       <nav>
         {/* <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
         <Menu cursorChangeHandler={cursorChangeHandler("cursor")} />
@@ -31,6 +31,6 @@ export default function Layout({ children }) {
           />
         )}
       </footer>
-    </CursorContextProvider>
+    </>
   );
 }
