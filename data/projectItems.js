@@ -1,8 +1,10 @@
+//TODO: Include this portfolio, furrow clone, add firebase to library
+//TODO: Delete Calculator?
 export const projectItems = [
   {
     name: "Shopping Cart",
     skills: ["React", "Styled Components"],
-    info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
+    info: "This responsive project includes fully functioning shopping cart implemented using React Context API.",
     path: "/project1_l.png",
     github: "https://github.com/bravoosonja/shopping-cart",
     live: "https://regal-faun-bcff09.netlify.app/",
@@ -11,7 +13,7 @@ export const projectItems = [
   {
     name: "Movie App",
     skills: ["React", "Styled Components"],
-    info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
+    info: "Fetching external API, this project displays popular movies and information along with search function.",
     path: "/project2_l.png",
     github: "https://github.com/bravoosonja/movie-app",
     live: "https://master--bright-parfait-e0cd13.netlify.app/",
@@ -20,7 +22,7 @@ export const projectItems = [
   {
     name: "Huddle",
     skills: ["React", "Styled Components"],
-    info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
+    info: "A clone project to practice React and Styled Components.",
     path: "/project3_l.png",
     github: "https://github.com/bravoosonja/huddle",
     live: "https://main--transcendent-marzipan-da48af.netlify.app/",
@@ -29,7 +31,7 @@ export const projectItems = [
   {
     name: "Calculator",
     skills: ["Vanilla JavaScript", "HTML", "CSS"],
-    info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
+    info: "A simple on-screen calculator.",
     path: "/project4_l.png",
     github: "https://github.com/bravoosonja/calculator",
     live: "https://bravoosonja.github.io/calculator/",
@@ -38,7 +40,7 @@ export const projectItems = [
   {
     name: "Library",
     skills: ["Vanilla JavaScript", "HTML", "CSS"],
-    info: "Anim dolore ut occaecat aliquip deserunt nisi ut commodo ad ex aliquip ad..",
+    info: "This project showcases JavaScript CRUD operation.",
     path: "/project5_l.png",
     github: "https://github.com/bravoosonja/library",
     live: "https://bravoosonja.github.io/library/",

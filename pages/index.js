@@ -6,7 +6,7 @@ import Banner from "../components/Banner";
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import Contact from "./Contact";
+import Contact from "./contact/Contact/Contact";
 // context
 import { CursorContext } from "../context/cursor-context";
 import { gsap } from "gsap/dist/gsap";

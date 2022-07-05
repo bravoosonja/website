@@ -7,7 +7,7 @@ import { useState } from "react";
 // styles
 import styles from "../styles/pages/contact.module.scss";
 // components
-import AnimatedTitle from "../components/feature/AnimatedTitle";
+import AnimatedTitle from "../../components/feature/AnimatedTitletle";
 // icons
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";

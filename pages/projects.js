@@ -58,15 +58,6 @@ export default function Projects() {
                 <div className={styles.overlay}></div>
               </div>
               <div className={styles.text}>
-                <h4>{projectItem.name}</h4>
-                <div className={styles.skills}>
-                  {projectItem.skills.map((skill) => (
-                    <div className={styles.skill}>
-                      <h5>{skill}</h5>
-                    </div>
-                  ))}
-                </div>
-                <p>{projectItem.info}</p>
                 <div className={styles.icons}>
                   <IconContext.Provider value={{ color: "white" }}>
                     <a
@@ -84,6 +75,15 @@ export default function Projects() {
                       <RiExternalLinkLine />
                     </a>
                   </IconContext.Provider>
+                </div>
+                <h4>{projectItem.name}</h4>
+                <p>{projectItem.info}</p>
+                <div className={styles.skills}>
+                  {projectItem.skills.map((skill) => (
+                    <div className={styles.skill}>
+                      <h5>{skill}</h5>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
