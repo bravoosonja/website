@@ -2,6 +2,8 @@
 import styles from "../styles/components/skills.module.scss";
 // components
 import AnimatedTitle from "./feature/AnimatedTitle";
+// data
+import { skillsItems } from "../data/skillsItems";
 
 export default function Skills() {
   return (
@@ -11,25 +13,14 @@ export default function Skills() {
           <AnimatedTitle textToAnimate={"Skills"} />
         </div>
         <div className={styles.content}>
-          <div className={styles.colOne}>
-            <ul>Web Development Technologies</ul>
-            <li>HTML/CSS/Vanilla JavaScript</li>
-            <li>React</li>
-            <li>Styled Components</li>
-            <li>SASS</li>
-          </div>
-          <div className={styles.colTwo}>
-            <ul>Web Frameworks</ul>
-            <li>Next JS</li>
-            <li>Gatsby JS</li>
-          </div>
-          <div className={styles.colThree}>
-            <ul>Network Security</ul>
-            <li>CompTIA Security +</li>
-            <li>
-              Cisco Certified Network Associate (CCNA) Routing and Switching
-            </li>
-          </div>
+          {skillsItems.map((skillItem, index) => (
+            <div className={styles.column} key={index}>
+              <ul>{skillItem.title}</ul>
+              {skillItem.contents.map((content, index) => (
+                <li key={index}>{content}</li>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>

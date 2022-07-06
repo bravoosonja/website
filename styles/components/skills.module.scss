@@ -4,13 +4,13 @@
   width: 100%;
   height: 100%;
   background-color: $banner-background;
-  padding: 3rem 2rem;
 
   .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 3rem 2rem;
 
     .title {
       h1 {
@@ -22,26 +22,37 @@
     .content {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-row: auto;
       justify-content: center;
       align-items: center;
-      grid-gap: 1rem;
-      color: $dark-gray;
+      grid-gap: 1.5rem;
+      text-align: center;
+      width: 95%;
 
-      ul {
-        font-size: 1.6rem;
-      }
+      .column {
+        height: 300px;
+        padding: 1rem;
+        background-color: $dark-blur;
 
-      li {
-        list-style: none;
-      }
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
 
-      .colOne {
-      }
+        ul {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          font-weight: 600;
+          color: $gray;
+        }
 
-      .colTwo {
-      }
-
-      .colThree {
+        li {
+          list-style: none;
+          font-size: 1.2rem;
+          color: $dark-gray;
+        }
       }
     }
   }
