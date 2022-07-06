@@ -2,26 +2,27 @@
 
 .projects {
   height: 100vh;
-  width: 100vw;
-  background-color: $projects-background;
+  width: 100%;
+  background-color: $banner-background;
   color: $dark-gray;
 
   .wrapper {
     width: 100%;
     height: 100%;
-    padding: 3rem;
+    padding: 5rem 3rem;
 
     .title {
       position: absolute;
       top: 0;
       // left: 5vw;
-      font-size: 7rem;
+
       z-index: 5;
       width: 100%;
       margin: 0;
 
       h1 {
-        color: $dark-gray;
+        color: white;
+        font-size: 6rem;
       }
     }
 
@@ -53,8 +54,8 @@
           }
 
           .overlay {
-            background-color: #000;
-            opacity: 0.521;
+            background-color: black;
+            opacity: 0.321;
             width: 100%;
             height: 100%;
             position: absolute;

@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 // styles
 import styles from "../styles/components/banner.module.scss";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Banner() {
   return (
-    <div className={styles.banner}>
+    <div className={styles.banner} id="container">
       <div className={styles.wrapper}>
         <motion.div
           className={styles.bannerRowTop}
@@ -40,6 +41,7 @@ export default function Banner() {
         >
           <h1>user experience</h1>
         </motion.div>
+
         {/* <motion.div
           className={styles.scrollDown}
           initial={{ scale: 0 }}
