@@ -8,8 +8,9 @@
 
   .wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     .title {
       h1 {
@@ -19,6 +20,29 @@
     }
 
     .content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      align-items: center;
+      grid-gap: 1rem;
+      color: $dark-gray;
+
+      ul {
+        font-size: 1.6rem;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .colOne {
+      }
+
+      .colTwo {
+      }
+
+      .colThree {
+      }
     }
   }
 }
