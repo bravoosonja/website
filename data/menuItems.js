@@ -8,10 +8,6 @@ export const menuItems = [
     path: "/About",
   },
   {
-    name: "Skills",
-    path: "/Skills",
-  },
-  {
     name: "Projects",
     path: "/Projects",
   },

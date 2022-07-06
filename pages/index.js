@@ -4,7 +4,6 @@ import CustomCursor from "../components/feature/CustomCursor";
 import Banner from "../components/Banner";
 // pages
 import About from "./About";
-import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 // context
@@ -27,9 +26,6 @@ export default function Home() {
       </section>
       <section>
         <About />
-      </section>
-      <section>
-        <Skills />
       </section>
       <section>
         <Projects />

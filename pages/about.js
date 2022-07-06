@@ -1,7 +1,4 @@
 import styles from "../styles/pages/about.module.scss";
-// icons
-import { HiArrowUp } from "react-icons/hi";
-import { IconContext } from "react-icons/lib";
 // components
 import AnimatedTitle from "../components/feature/AnimatedTitle";
 
@@ -9,42 +6,29 @@ export default function About() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.hiddenCard}>
-          <div className={styles.title}>
-            <AnimatedTitle textToAnimate={"About"} />
-          </div>
-          <ul>
-            My latest obsessions
-            <li>Animation effects</li>
-            <li>Parallax scroll</li>
-            <li>Thinking of different ways to use mix-blend-mode</li>
-          </ul>
-          <ul>
-            My regular obsessions
-            <li>Nutella</li>
-            <li>Mechanical keyboards</li>
-            <li>Nintendo games</li>
-          </ul>
-          <div className={styles.arrows}>
-            <IconContext.Provider value={{ color: "hsla(0, 0%, 23%, 0.288)" }}>
-              <HiArrowUp />
-              <HiArrowUp />
-              <HiArrowUp />
-            </IconContext.Provider>
-          </div>
+        <div className={styles.title}>
+          <AnimatedTitle textToAnimate={"About"} />
         </div>
-        <div className={styles.card}>
+        <div className={styles.content}>
           <div className={styles.text}>
             <p>
-              Nulla eu sodales nunc. Donec diam enim, facilisis vitae eros sed,
-              blandit eleifend nulla. Nunc nec diam gravida, dapibus ante eget,
-              finibus nibh. Nunc sed 4fermentum dui. Aenean arcu velit, euismod
+              Ipsum aute occaecat esse magna ex aliqua Lorem quis qui labore
+              eiusmod fugiat. Quis consequat esse laboris sint deserunt
+              consequat magna deserunt anim. Dolor aliquip id occaecat qui
+              occaecat deserunt adipisicing pariatur non tempor sit elit.
+              Laboris eiusmod dolore veniam minim deserunt labore fugiat Lorem
+              aute adipisicing voluptate et. Non tempor ipsum excepteur dolore
+              nulla nostrud cupidatat ad nisi officia ullamco aute culpa cillum.
             </p>
-            <h4>Rarely Asked Questions</h4>
-            <p>Accordian Menu </p>
-            <p>Accordian Menu </p>
-            <p>Accordian Menu </p>
-            <p>Accordian Menu </p>
+            <p>
+              Ipsum aute occaecat esse magna ex aliqua Lorem quis qui labore
+              eiusmod fugiat. Quis consequat esse laboris sint deserunt
+              consequat magna deserunt anim. Dolor aliquip id occaecat qui
+              occaecat deserunt adipisicing pariatur non tempor sit elit.
+              Laboris eiusmod dolore veniam minim deserunt labore fugiat Lorem
+              aute adipisicing voluptate et. Non tempor ipsum excepteur dolore
+              nulla nostrud cupidatat ad nisi officia ullamco aute culpa cillum.
+            </p>
           </div>
         </div>
       </div>
