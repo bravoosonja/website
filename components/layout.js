@@ -5,15 +5,12 @@ import CursorContextProvider, {
 } from "../context/cursor-context";
 // components
 import Menu from "./Menu";
-import Cookie from "./UI/Cookie";
 import CustomCursor from "./feature/CustomCursor";
+import Contact from "../pages/Contact";
 
 export default function Layout({ children }) {
   // const [toggleMenu, setToggleMenu] = useState(false);
   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
-
-  // exit animation for cookie disclaimer
-  const { cookieActive, setCookieActive } = useState(true);
 
   return (
     <>
@@ -23,12 +20,7 @@ export default function Layout({ children }) {
       </nav>
       <main>{children}</main>
       <footer>
-        {cookieActive && (
-          <Cookie
-            cookieActive={cookieActive}
-            setCookieActive={setCookieActive}
-          />
-        )}
+        <Contact />
       </footer>
     </>
   );

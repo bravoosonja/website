@@ -1,10 +1,7 @@
 @import "../variables.module.scss";
 
 .container {
-  padding: 1rem 2rem;
-  width: 100%;
-  height: min-content;
-  background-color: $banner-background;
+  background-color: transparent;
 
   .wrapper {
     position: fixed;
@@ -12,7 +9,7 @@
     right: 2rem;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: fit-content;
 
     .content {
       display: flex;
