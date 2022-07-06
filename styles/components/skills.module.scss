@@ -3,14 +3,13 @@
 .container {
   width: 100%;
   height: 100%;
-  padding: 3rem 2rem;
   background-color: $banner-background;
+  padding: 3rem 2rem;
 
   .wrapper {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
 
     .title {
       h1 {
@@ -20,14 +19,6 @@
     }
 
     .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $dark-gray;
-
-      .text {
-        width: 50%;
-      }
     }
   }
 }
