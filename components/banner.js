@@ -40,7 +40,7 @@ export default function Banner() {
         >
           <h1>user experience</h1>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className={styles.scrollDown}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -51,7 +51,7 @@ export default function Banner() {
           }}
         >
           <span>Scroll down</span>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

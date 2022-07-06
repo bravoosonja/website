@@ -1,34 +1,38 @@
 @import "../variables.module.scss";
 
 .banner {
-  padding: 3rem;
-  padding-top: 4rem;
+  padding: 3rem 2rem;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: $banner-background;
   box-sizing: border-box;
-
-  .rowTitle {
-    font-size: 12rem;
-    line-height: 1.4;
-    font-weight: 400;
-  }
 
   .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: left;
     color: $dark-gray;
     width: 100%;
-    font-family: "Armouk";
+    margin-top: 2rem;
+
+    h1 {
+      font-family: "Armouk";
+      font-size: 10rem;
+      line-height: 1;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: left;
+    }
 
     .bannerRowTop {
       text-align: left;
+      align-items: flex-start;
     }
 
     .bannerRowCenter {
       text-align: center;
+      align-items: center;
     }
 
     .bannerRowBottom {
