@@ -1,9 +1,13 @@
 // layouts
 import Layout from "../../components/Layout";
 import ProjectLayout from "../../components/ProjectLayout";
+// data
+import { projectItems } from "../../data/projectItems";
+// styles
+import styles from "../../styles/components/projectLayout.module.scss";
 
 export default function MovieApp() {
-  return <div>MovieApp</div>;
+  return <></>;
 }
 
 MovieApp.getLayout = function getLayout(MovieApp) {
