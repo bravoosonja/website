@@ -1,5 +1,5 @@
 //TODO: add images
-//
+import Image from "next/image";
 // style
 import styles from "../../styles/pages/shoppingCart.module.scss";
 
@@ -9,10 +9,32 @@ export default function ShoppingCart() {
       <div className={styles.wrapper}>
         <div className={styles.title}>
           <h1>Shopping Cart</h1>
-          <p>
-            The objective of this project is to implement a shopping cart
-            functionality using React Context API.
-          </p>
+        </div>
+        <div className={styles.overview}>
+          <div className={styles.info}>
+            <p>
+              The objective of this project is to implement a shopping cart
+              functionality using React Context API.
+            </p>
+          </div>
+
+          <div className={styles.skills}>
+            <div className={styles.skill}>
+              <p>React</p>
+            </div>
+            <div className={styles.skill}>
+              <p>Styled Components</p>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.image}>
+          <Image
+            src="/projectImages/shoppingCart/shoppingCart-desktop-mockup.png"
+            width={736}
+            height={356}
+            alt=""
+          />
         </div>
         <div className={styles.content}>
           <div className={styles.text}>
