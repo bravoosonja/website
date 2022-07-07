@@ -51,7 +51,7 @@ export default function Projects() {
               <div className={styles.image}>
                 <Image
                   key={projectItem.key}
-                  src={projectItem.path}
+                  src={projectItem.imagePath}
                   alt={projectItem.name}
                   objectFit="cover"
                   width={1920}

@@ -6,14 +6,21 @@ import CustomCursor from "../components/feature/CustomCursor";
 import CursorContextProvider from "../context/cursor-context";
 
 function MyApp({ Component, pageProps }) {
-  return (
+  // use the layout defined at the page level, if available
+  const getLayout = Component.getLayout || ((page) => page);
+
+  return getLayout(
     <>
       <CustomCursor />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </>
   );
+  // <>
+  //   <CustomCursor />
+  //   <Layout>
+  //     <Component {...pageProps} />
+  //   </Layout>
+  // </>
 }
 
 export default MyApp;
