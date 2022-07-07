@@ -3,6 +3,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // styles
@@ -77,7 +78,11 @@ export default function Projects() {
                     </a>
                   </IconContext.Provider>
                 </div>
-                <h4>{projectItem.name}</h4>
+                <Link href={projectItem.page}>
+                  <h4>
+                    <a>{projectItem.name}</a>
+                  </h4>
+                </Link>
                 <p>{projectItem.info}</p>
                 <div className={styles.skills}>
                   {projectItem.skills.map((skill) => (

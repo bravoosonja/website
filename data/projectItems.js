@@ -8,6 +8,7 @@ export const projectItems = [
     path: "/project1_l.png",
     github: "https://github.com/bravoosonja/shopping-cart",
     live: "https://regal-faun-bcff09.netlify.app/",
+    page: "/Projects/ShoppingCart",
     key: 1,
   },
   {
@@ -17,6 +18,7 @@ export const projectItems = [
     path: "/project2_l.png",
     github: "https://github.com/bravoosonja/movie-app",
     live: "https://master--bright-parfait-e0cd13.netlify.app/",
+    page: "/Projects/MovieApp",
     key: 2,
   },
   {
@@ -26,6 +28,7 @@ export const projectItems = [
     path: "/project3_l.png",
     github: "https://github.com/bravoosonja/huddle",
     live: "https://main--transcendent-marzipan-da48af.netlify.app/",
+    page: "/Projects/Huddle",
     key: 3,
   },
   {
@@ -35,6 +38,7 @@ export const projectItems = [
     path: "/project4_l.png",
     github: "https://github.com/bravoosonja/calculator",
     live: "https://bravoosonja.github.io/calculator/",
+    page: "/Projects/Calculator",
     key: 4,
   },
   {
@@ -44,6 +48,7 @@ export const projectItems = [
     path: "/project5_l.png",
     github: "https://github.com/bravoosonja/library",
     live: "https://bravoosonja.github.io/library/",
+    page: "/Projects/Library",
     key: 5,
   },
   {
@@ -53,6 +58,7 @@ export const projectItems = [
     path: "/project6_l.png",
     github: "https://github.com/bravoosonja/etchasketch",
     live: "https://bravoosonja.github.io/etchasketch/",
+    page: "/Projects/EtchASketch",
     key: 6,
   },
 ];
