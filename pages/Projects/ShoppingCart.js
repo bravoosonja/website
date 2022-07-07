@@ -17,7 +17,6 @@ export default function ShoppingCart() {
               functionality using React Context API.
             </p>
           </div>
-
           <div className={styles.skills}>
             <div className={styles.skill}>
               <p>React</p>
@@ -27,16 +26,7 @@ export default function ShoppingCart() {
             </div>
           </div>
         </div>
-
-        <div className={styles.image}>
-          <Image
-            src="/projectImages/shoppingCart/shoppingCart-desktop-mockup.png"
-            width={736}
-            height={356}
-            alt=""
-          />
-        </div>
-        <div className={styles.content}>
+        <div className={styles.grid}>
           <div className={styles.text}>
             <h2>Features</h2>
             <ul>
@@ -47,6 +37,15 @@ export default function ShoppingCart() {
               <li>Mobile responsive</li>
             </ul>
           </div>
+          <div className={styles.image}>
+            <Image
+              src="/projectImages/shoppingCart/shoppingCart-desktop-mockup.png"
+              width={736}
+              height={356}
+              alt=""
+            />
+          </div>
+
           <div className={styles.images}></div>
         </div>
       </div>
