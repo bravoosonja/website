@@ -3,7 +3,7 @@ import styles from "../styles/components/skills.module.scss";
 // components
 import AnimatedTitle from "./feature/AnimatedTitle";
 // data
-import { skillsItems } from "../data/skillsItems";
+import skillsItems from "../public/data.json";
 
 export default function Skills() {
   return (
@@ -13,12 +13,11 @@ export default function Skills() {
           <AnimatedTitle textToAnimate={"Skills"} />
         </div>
         <div className={styles.content}>
-          {skillsItems.map((skillItem, index) => (
-            <div className={styles.column} key={index}>
-              <ul>{skillItem.title}</ul>
-              {skillItem.contents.map((content, index) => (
-                <li key={index}>{content}</li>
-              ))}
+          {skillsItems.map((skill) => (
+            <div className={styles.column} key={skill.id}>
+              <ul>{skill.title}</ul>
+
+              <li key={skill.index}>{skill.contents}</li>
             </div>
           ))}
         </div>

@@ -10,16 +10,23 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "../../styles/pages/projects.module.scss";
 // components
 import AnimatedTitle from "../../components/feature/AnimatedTitle";
-// data
-import { projectItems } from "../../data/projectItems";
 // icons
 import { FaGithub } from "react-icons/fa";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { IconContext } from "react-icons";
 
+export async function getStaticProps() {
+  const res = await fetch("../public/data.json");
+  const projectItem = await res.json();
+  return {
+    props: {
+      data: { projectItems },
+    },
+  };
+}
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Projects() {
+export default function Projects(projectItems) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -47,11 +54,11 @@ export default function Projects() {
         </div>
         <div className={styles.contents} id="contents">
           {projectItems.map((projectItem) => (
-            <div className={styles.content} id="content">
+            <div className={styles.content} id="content" key={projectItems.id}>
               <div className={styles.image}>
                 <Image
-                  key={projectItem.key}
-                  src={projectItem.imagePath}
+                  key={projectItem.id}
+                  src={projectItem.path}
                   alt={projectItem.name}
                   objectFit="cover"
                   width={1920}
@@ -78,11 +85,7 @@ export default function Projects() {
                     </a>
                   </IconContext.Provider>
                 </div>
-                <Link href={projectItem.page}>
-                  <h4>
-                    <a>{projectItem.name}</a>
-                  </h4>
-                </Link>
+                <h4>{projectItem.name}</h4>
                 <p>{projectItem.info}</p>
                 <div className={styles.skills}>
                   {projectItem.skills.map((skill) => (

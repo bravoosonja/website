@@ -13,7 +13,7 @@ import CursorContextProvider, {
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-export default function Home() {
+export default function Home({ data: { projectItems } }) {
   // custom cursor
   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
 
@@ -28,7 +28,7 @@ export default function Home() {
         <About />
       </section>
       <section>
-        <Projects />
+        <Projects projectItems={projectItems} />
       </section>
     </CursorContextProvider>
   );

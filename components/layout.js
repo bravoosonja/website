@@ -16,6 +16,7 @@ export default function Layout({ children }) {
     <>
       <nav>
         {/* <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
+
         <Menu />
       </nav>
       <main>{children}</main>
