@@ -14,19 +14,12 @@ import AnimatedTitle from "../../components/feature/AnimatedTitle";
 import { FaGithub } from "react-icons/fa";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { IconContext } from "react-icons";
+//data
+import { projectItems } from "../../public/data";
 
-export async function getStaticProps() {
-  const res = await fetch("../public/data.json");
-  const projectItem = await res.json();
-  return {
-    props: {
-      data: { projectItems },
-    },
-  };
-}
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Projects(projectItems) {
+export default function Projects() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -54,12 +47,12 @@ export default function Projects(projectItems) {
         </div>
         <div className={styles.contents} id="contents">
           {projectItems.map((projectItem) => (
-            <div className={styles.content} id="content" key={projectItems.id}>
+            <div className={styles.content} id="content">
               <div className={styles.image}>
                 <Image
-                  key={projectItem.id}
-                  src={projectItem.path}
-                  alt={projectItem.name}
+                  key={id}
+                  src={imagePath}
+                  alt={name}
                   objectFit="cover"
                   width={1920}
                   height={929}
@@ -69,26 +62,22 @@ export default function Projects(projectItems) {
               <div className={styles.text}>
                 <div className={styles.icons}>
                   <IconContext.Provider value={{ color: "white" }}>
-                    <a
-                      target="_blank"
-                      href={projectItem.github}
-                      rel="noopener noreferrer"
-                    >
+                    <a target="_blank" href={github} rel="noopener noreferrer">
                       <FaGithub />
                     </a>
-                    <a
-                      target="_blank"
-                      href={projectItem.live}
-                      rel="noopener noreferrer"
-                    >
+                    <a target="_blank" href={live} rel="noopener noreferrer">
                       <RiExternalLinkLine />
                     </a>
                   </IconContext.Provider>
                 </div>
-                <h4>{projectItem.name}</h4>
-                <p>{projectItem.info}</p>
+                <Link href={page}>
+                  <h4>
+                    <a>{name}</a>
+                  </h4>
+                </Link>
+                <p>{info}</p>
                 <div className={styles.skills}>
-                  {projectItem.skills.map((skill) => (
+                  {skills.map((skill) => (
                     <div className={styles.skill}>
                       <h5>{skill}</h5>
                     </div>
@@ -97,6 +86,7 @@ export default function Projects(projectItems) {
               </div>
             </div>
           ))}
+
           <div className={styles.icon}></div>
         </div>
       </div>

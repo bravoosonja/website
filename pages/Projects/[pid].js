@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 // styles
 import styles from "../../styles/components/projectLayout.module.scss";
 // data
-import { ProjectItems } from "../../json/projectItems.json";
+import { projectItems } from "../../public/data";
 
 export default function Project() {
   const router = useRouter();

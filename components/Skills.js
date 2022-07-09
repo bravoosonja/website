@@ -3,7 +3,7 @@ import styles from "../styles/components/skills.module.scss";
 // components
 import AnimatedTitle from "./feature/AnimatedTitle";
 // data
-import skillsItems from "../public/data.json";
+import { skillsItems } from "../public/data";
 
 export default function Skills() {
   return (
