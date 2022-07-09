@@ -35,14 +35,10 @@
         }
       },
       "TechStack": {
-        "type": "Select",
+        "type": "Text",
         "config": {
           "label": "Tech Stack",
-          "placeholder": "",
-          "options": [
-            "1",
-            "2"
-          ]
+          "placeholder": ""
         }
       },
       "GithubLink": {

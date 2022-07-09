@@ -1,10 +1,10 @@
 {
-  "id": "96686184-d094-4d56-ba56-2a14e1398a86",
-  "uid": "inventore-explicabo-nobis",
+  "id": "ca26b18c-1f17-4305-ae3b-e7ee0123575d",
+  "uid": "eligendi-maiores-magni",
   "type": "projects",
   "data": {
-    "Name": "brand cutting-edge e-tailers",
-    "Overview": "innovate innovative ROI",
+    "Name": "exploit intuitive models",
+    "Overview": "monetize value-added web-readiness",
     "mainImage": {
       "dimensions": {
         "width": 900,
@@ -12,32 +12,32 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
     },
-    "TechStack": "2",
+    "TechStack": "whiteboard out-of-the-box functionalities",
     "GithubLink": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
+      "url": "https://prismic.io"
     },
     "LiveLink": {
       "link_type": "Web",
-      "url": "http://twitter.com"
+      "url": "http://google.com"
     },
     "TechReference": {
       "link_type": "Web",
-      "url": "http://google.com"
+      "url": "https://prismic.io"
     },
     "Features": [
       {
         "type": "paragraph",
-        "text": "Minim consequat ex sint est et labore eiusmod occaecat reprehenderit.",
+        "text": "Ullamco dolor consectetur deserunt ipsum sit ea dolor.",
         "spans": []
       }
     ],
     "LessonsLearned": [
       {
         "type": "paragraph",
-        "text": "Magna anim aute ea qui in fugiat proident ullamco eiusmod.",
+        "text": "Minim laboris enim aliqua culpa aliquip proident nostrud exercitation.",
         "spans": []
       }
     ],
@@ -48,7 +48,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
     },
     "MobileDemo": {
       "dimensions": {
@@ -57,7 +57,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
     },
     "DesktopMockup": {
       "dimensions": {
@@ -66,7 +66,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
     },
     "MobileMockup": {
       "dimensions": {
@@ -75,7 +75,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
     }
   }
 }
