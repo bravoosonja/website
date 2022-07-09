@@ -1,0 +1,27 @@
+{
+  "slices": {
+    "TextBlock": {},
+    "ImageSlider": {
+      "default": {
+        "primary": {}
+      }
+    }
+  },
+  "_cts": {
+    "projects": {},
+    "about": {
+      "Title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "About": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
+  }
+}

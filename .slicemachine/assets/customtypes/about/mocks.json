@@ -1,0 +1,33 @@
+{
+  "id": "35145e96-0375-4eee-84d6-12cf441eed58",
+  "uid": "qui-omnis-quo",
+  "type": "about",
+  "data": {
+    "Title": [
+      {
+        "type": "paragraph",
+        "text": "Cupidatat esse ipsum commodo dolor officia aliquip. Ullamco ullamco ut est duis deserunt voluptate consectetur cupidatat mollit dolore enim. Id veniam eu reprehenderit laboris consectetur.",
+        "spans": []
+      }
+    ],
+    "About": [
+      {
+        "type": "paragraph",
+        "text": "Sint velit aliquip qui qui id. Laborum eiusmod anim Lorem labore laborum anim dolor cillum adipisicing ex.",
+        "spans": []
+      }
+    ],
+    "techReference": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "SkillsTitle": "mesh clicks-and-mortar e-services",
+    "Skills": [
+      {
+        "type": "paragraph",
+        "text": "Est id in laboris sint cillum velit sint irure do veniam.",
+        "spans": []
+      }
+    ]
+  }
+}

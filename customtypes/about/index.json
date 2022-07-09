@@ -1,0 +1,73 @@
+{
+  "id": "about",
+  "label": "About",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "Title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "About": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,em,hyperlink,image,embed,list-item,o-list-item,rtl,strong"
+        }
+      },
+      "techReference": {
+        "type": "Link",
+        "config": {
+          "label": "Tech Reference",
+          "select": "document",
+          "customtypes": [
+            "about",
+            "projects"
+          ]
+        }
+      },
+      "SkillsTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Skills Title",
+          "placeholder": ""
+        }
+      },
+      "Skills": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Skills",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "text_block": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

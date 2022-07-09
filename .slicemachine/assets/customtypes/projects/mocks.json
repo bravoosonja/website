@@ -1,0 +1,81 @@
+{
+  "id": "96686184-d094-4d56-ba56-2a14e1398a86",
+  "uid": "inventore-explicabo-nobis",
+  "type": "projects",
+  "data": {
+    "Name": "brand cutting-edge e-tailers",
+    "Overview": "innovate innovative ROI",
+    "mainImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"
+    },
+    "TechStack": "2",
+    "GithubLink": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "LiveLink": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
+    "TechReference": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "Features": [
+      {
+        "type": "paragraph",
+        "text": "Minim consequat ex sint est et labore eiusmod occaecat reprehenderit.",
+        "spans": []
+      }
+    ],
+    "LessonsLearned": [
+      {
+        "type": "paragraph",
+        "text": "Magna anim aute ea qui in fugiat proident ullamco eiusmod.",
+        "spans": []
+      }
+    ],
+    "DekstopDemo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+    },
+    "MobileDemo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+    },
+    "DesktopMockup": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+    },
+    "MobileMockup": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
+    }
+  }
+}
