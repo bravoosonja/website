@@ -22,7 +22,7 @@ The aim of this project is to learn Next JS framework and showcase react skills.
 
 - next js file structure
 - next js dynamic routing using slug
-- next js static data fetching (local)
+- next js static data fetching from CMS (Sanity)
 - Rendering styled components on next js
   -babel plugin
 - Using contexts

@@ -1,6 +1,5 @@
 //TODO: Menu bar
 //TODO: Change icon links to buttons
-
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +13,7 @@ import AnimatedTitle from "../../components/feature/AnimatedTitle";
 import { FaGithub } from "react-icons/fa";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { IconContext } from "react-icons";
-//data
+// data
 import { projectItems } from "../../public/data";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,13 +45,12 @@ export default function Projects() {
           <AnimatedTitle textToAnimate={"Projects"} />
         </div>
         <div className={styles.contents} id="contents">
-          {projectItems.map((projectItem) => (
-            <div className={styles.content} id="content">
+          {projectItems?.map((project) => (
+            <div className={styles.content} id="content" key={project.id}>
               <div className={styles.image}>
                 <Image
-                  key={id}
-                  src={imagePath}
-                  alt={name}
+                  src={project.imagePath}
+                  alt={project.name}
                   objectFit="cover"
                   width={1920}
                   height={929}
@@ -62,23 +60,31 @@ export default function Projects() {
               <div className={styles.text}>
                 <div className={styles.icons}>
                   <IconContext.Provider value={{ color: "white" }}>
-                    <a target="_blank" href={github} rel="noopener noreferrer">
+                    <a
+                      target="_blank"
+                      href={project.githubLink}
+                      rel="noopener noreferrer"
+                    >
                       <FaGithub />
                     </a>
-                    <a target="_blank" href={live} rel="noopener noreferrer">
+                    <a
+                      target="_blank"
+                      href={project.liveLink}
+                      rel="noopener noreferrer"
+                    >
                       <RiExternalLinkLine />
                     </a>
                   </IconContext.Provider>
                 </div>
-                <Link href={page}>
+                <Link href={project.page}>
                   <h4>
-                    <a>{name}</a>
+                    <a>{project.name}</a>
                   </h4>
                 </Link>
-                <p>{info}</p>
+                <p>{project.overview}</p>
                 <div className={styles.skills}>
-                  {skills.map((skill) => (
-                    <div className={styles.skill}>
+                  {projectItems?.skills?.map((skill) => (
+                    <div className={styles.skill} key={skill.id}>
                       <h5>{skill}</h5>
                     </div>
                   ))}
@@ -86,8 +92,6 @@ export default function Projects() {
               </div>
             </div>
           ))}
-
-          <div className={styles.icon}></div>
         </div>
       </div>
     </div>
