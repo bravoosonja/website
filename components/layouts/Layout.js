@@ -2,11 +2,11 @@ import { useContext, useState, useEffect } from "react";
 // context
 import CursorContextProvider, {
   CursorContext,
-} from "../context/cursor-context";
+} from "../../context/cursor-context";
 // components
-import Menu from "./Menu";
-import CustomCursor from "./feature/CustomCursor";
-import Contact from "../pages/contact";
+import Menu from "../Menu";
+import CustomCursor from "../feature/CustomCursor";
+import Contact from "../../pages/contact";
 
 export default function Layout({ children }) {
   // const [toggleMenu, setToggleMenu] = useState(false);

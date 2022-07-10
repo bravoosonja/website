@@ -15,21 +15,10 @@ import { RiExternalLinkLine } from "react-icons/ri";
 import { IconContext } from "react-icons";
 // data
 import { projectItems } from "../../public/data";
-//import { createClient } from "../../prismicio";
-
-// export async function getStaticProps({ previewData }) {
-//   const client = createClient({ previewData });
-
-//   const page = await client.getByUID("Projects", "projects");
-
-//   return {
-//     props: { page }, // Will be passed to the page component as props
-//   };
-// }
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Projects({ page }) {
+export default function Projects() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -92,10 +81,10 @@ export default function Projects({ page }) {
                     <a key={project.id}>{project.name}</a>
                   </h4>
                 </Link>
-                <p>{project.overview}</p>
+                <p>{project.info}</p>
                 <div className={styles.skills}>
-                  {projectItems?.skills?.map((skill) => (
-                    <div className={styles.skill} key={skill.id}>
+                  {project?.skills?.map((skill, index) => (
+                    <div className={styles.skill} key={index}>
                       <h5>{skill}</h5>
                     </div>
                   ))}
