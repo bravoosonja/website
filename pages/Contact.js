@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/pages/contact.module.scss";
 // components
 import AnimatedTitle from "../components/feature/AnimatedTitle";
+import Layout from "../components/layouts/Layout";
 // icons
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
@@ -108,3 +109,7 @@ export default function Contact() {
     </div>
   );
 }
+
+Contact.getLayout = function getLayout(Contact) {
+  return <Layout>{Contact}</Layout>;
+};

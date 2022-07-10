@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "../../styles/pages/projects.module.scss";
 // components
 import AnimatedTitle from "../../components/feature/AnimatedTitle";
+import Layout from "../../components/layouts/Layout";
 // icons
 import { FaGithub } from "react-icons/fa";
 import { RiExternalLinkLine } from "react-icons/ri";
@@ -97,3 +98,7 @@ export default function Projects() {
     </div>
   );
 }
+
+Projects.getLayout = function getLayout(Projects) {
+  return <Layout>{Projects}</Layout>;
+};

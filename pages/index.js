@@ -2,10 +2,10 @@ import { useContext, useRef, useEffect } from "react";
 // components
 import CustomCursor from "../components/feature/CustomCursor";
 import Banner from "../components/Banner";
+import Layout from "../components/layouts/Layout";
 // pages
 import About from "./about";
 import Projects from "./projects/index";
-import Contact from "./contact";
 // context
 import CursorContextProvider, {
   CursorContext,
@@ -33,3 +33,7 @@ export default function Home() {
     </CursorContextProvider>
   );
 }
+
+Home.getLayout = function getLayout(Home) {
+  return <Layout>{Home}</Layout>;
+};

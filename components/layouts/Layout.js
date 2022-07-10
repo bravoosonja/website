@@ -14,6 +14,7 @@ export default function Layout({ children }) {
 
   return (
     <>
+      <CustomCursor />
       <nav>
         {/* <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
 

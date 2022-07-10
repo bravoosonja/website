@@ -2,6 +2,7 @@ import styles from "../styles/pages/about.module.scss";
 // components
 import AnimatedTitle from "../components/feature/AnimatedTitle";
 import Skills from "../components/Skills";
+import Layout from "../components/layouts/Layout";
 
 export default function About() {
   return (
@@ -42,3 +43,7 @@ export default function About() {
     </>
   );
 }
+
+About.getLayout = function getLayout(About) {
+  return <Layout>{About}</Layout>;
+};
