@@ -12,10 +12,16 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
           rel="stylesheet"
         />
+        <link href="themes/prism-nord.css" rel="stylesheet" />
+        {/* <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+        ></link> */}
       </Head>
       <body>
         <Main />
         <NextScript />
+        <script src="prism.js"></script>
       </body>
     </Html>
   );

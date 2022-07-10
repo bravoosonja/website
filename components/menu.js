@@ -29,12 +29,12 @@ export default function Menu() {
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <AnimateSharedLayout>
-            {menuItems.map((menuItem, index) => (
+            {menuItems.map((menuItem) => (
               <MenuItem
                 name={menuItem.name}
-                key={index}
-                selected={selected === index}
-                onClick={() => setSelected(index)}
+                key={menuItem.id}
+                selected={selected === menuItem.id}
+                onClick={() => setSelected(menuItem.id)}
                 link={menuItem.path}
               />
             ))}

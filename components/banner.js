@@ -19,7 +19,7 @@ export default function Banner() {
             delay: 1.5,
           }}
         >
-          <h1 className={styles.bannerRowTop}>I enjoy creating</h1>
+          <span className={styles.bannerRowTop}>I enjoy creating</span>
         </motion.div>
         <motion.div
           className={styles.bannerRowCenter}
@@ -27,7 +27,7 @@ export default function Banner() {
           animate={{ opacity: 1, y: "0em" }}
           transition={{ ease: [0.2, 0.65, 0.3, 0.9], duration: 1 }}
         >
-          <h1>aesthetic & fun</h1>
+          <span>aesthetic & fun</span>
         </motion.div>
         <motion.div
           className={styles.bannerRowBottom}
@@ -39,7 +39,7 @@ export default function Banner() {
             delay: 1,
           }}
         >
-          <h1>user experience</h1>
+          <span>user experience</span>
         </motion.div>
 
         {/* <motion.div

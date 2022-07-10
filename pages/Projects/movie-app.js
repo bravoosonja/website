@@ -3,9 +3,13 @@ import ProjectLayout from "../../components/layouts/ProjectLayout";
 
 export default function movieApp() {
   return (
-    <div>
-      <h1>Movie App</h1>
-    </div>
+    <>
+      <div className="title">
+        <h1>Movie App</h1>
+      </div>
+      <h2>Overview</h2>
+      <p>para</p>
+    </>
   );
 }
 

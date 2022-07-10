@@ -5,6 +5,9 @@ export default function shoppingCart() {
   return (
     <div>
       <h1>Shopping Cart</h1>
+      <h2>Overview</h2>
+      <h2>Features</h2>
+      <h2>Lessons Learned</h2>
       <p>shopping cart page</p>
     </div>
   );

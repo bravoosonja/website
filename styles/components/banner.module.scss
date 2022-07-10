@@ -16,13 +16,15 @@
     width: 100%;
     margin-top: 2rem;
 
-    h1 {
+    span {
       font-family: "Armouk";
       font-size: 11rem;
       line-height: 1;
       font-weight: 300;
       text-transform: uppercase;
       text-align: left;
+      font-weight: normal;
+      overflow-wrap: break-word;
     }
 
     .bannerRowTop {

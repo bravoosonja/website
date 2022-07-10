@@ -19,7 +19,7 @@ import { projectItems } from "../../public/data";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Projects() {
+export default function Projects({ allProjectsData }) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -49,9 +49,9 @@ export default function Projects() {
           {projectItems?.map((project) => (
             <div className={styles.content} id="content" key={project.id}>
               <div className={styles.image}>
-                <Image
+                <img
                   src={project.imagePath}
-                  alt={project.name}
+                  alt={project.title}
                   objectFit="cover"
                   width={1920}
                   height={929}
@@ -63,14 +63,14 @@ export default function Projects() {
                   <IconContext.Provider value={{ color: "white" }}>
                     <a
                       target="_blank"
-                      href={project.githubLink}
+                      href={project.github}
                       rel="noopener noreferrer"
                     >
                       <FaGithub />
                     </a>
                     <a
                       target="_blank"
-                      href={project.liveLink}
+                      href={project.live}
                       rel="noopener noreferrer"
                     >
                       <RiExternalLinkLine />
@@ -79,12 +79,12 @@ export default function Projects() {
                 </div>
                 <Link href={"/projects/" + project.id} key={project.id}>
                   <h4>
-                    <a key={project.id}>{project.name}</a>
+                    <a key={project.id}>{project.title}</a>
                   </h4>
                 </Link>
                 <p>{project.info}</p>
                 <div className={styles.skills}>
-                  {project?.skills?.map((skill, index) => (
+                  {project?.techStack?.map((skill, index) => (
                     <div className={styles.skill} key={index}>
                       <h5>{skill}</h5>
                     </div>
