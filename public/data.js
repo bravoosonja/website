@@ -13,8 +13,7 @@ export const projectItems = [
     imagePath: "/project1_l.png",
     github: "https://github.com/bravoosonja/shopping-cart",
     live: "https://regal-faun-bcff09.netlify.app/",
-    page: "/Projects/ShoppingCart",
-    id: 1,
+    id: "shopping-cart",
   },
   {
     name: "Movie App",
@@ -29,8 +28,7 @@ export const projectItems = [
     imagePath: "/project2_l.png",
     github: "https://github.com/bravoosonja/movie-app",
     live: "https://master--bright-parfait-e0cd13.netlify.app/",
-    page: "/Projects/MovieApp",
-    id: 2,
+    id: "movie-app",
   },
   {
     name: "Huddle",
@@ -40,8 +38,7 @@ export const projectItems = [
     imagePath: "/project3_l.png",
     github: "https://github.com/bravoosonja/huddle",
     live: "https://main--transcendent-marzipan-da48af.netlify.app/",
-    page: "/Projects/Huddle",
-    id: 3,
+    id: "huddle",
   },
   {
     name: "Calculator",
@@ -56,8 +53,7 @@ export const projectItems = [
     imagePath: "/project4_l.png",
     github: "https://github.com/bravoosonja/calculator",
     live: "https://bravoosonja.github.io/calculator/",
-    page: "/Projects/Calculator",
-    id: 4,
+    id: "calculator",
   },
   {
     name: "Library",
@@ -71,8 +67,7 @@ export const projectItems = [
     imagePath: "/project5_l.png",
     github: "https://github.com/bravoosonja/library",
     live: "https://bravoosonja.github.io/library/",
-    page: "/Projects/Library",
-    id: 5,
+    id: "library",
   },
   {
     name: "Etch a Sketch",
@@ -89,8 +84,7 @@ export const projectItems = [
     imagePath: "/project6_l.png",
     github: "https://github.com/bravoosonja/etchasketch",
     live: "https://bravoosonja.github.io/etchasketch/",
-    page: "/Projects/EtchASketch",
-    id: 6,
+    id: "etch-a-sketch",
   },
 ];
 
@@ -102,17 +96,17 @@ export const menuItems = [
   },
   {
     name: "About",
-    path: "/About",
+    path: "/about",
     id: 2,
   },
   {
     name: "Projects",
-    path: "/Projects",
+    path: "/projects",
     id: 3,
   },
   {
     name: "Contact",
-    path: "/Contact",
+    path: "/contact",
     id: 4,
   },
 ];

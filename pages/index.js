@@ -3,9 +3,9 @@ import { useContext, useRef, useEffect } from "react";
 import CustomCursor from "../components/feature/CustomCursor";
 import Banner from "../components/Banner";
 // pages
-import About from "./About";
+import About from "./about";
 import Projects from "./projects/index";
-import Contact from "./Contact";
+import Contact from "./contact";
 // context
 import CursorContextProvider, {
   CursorContext,

@@ -6,7 +6,7 @@ import CursorContextProvider, {
 // components
 import Menu from "./Menu";
 import CustomCursor from "./feature/CustomCursor";
-import Contact from "../pages/Contact";
+import Contact from "../pages/contact";
 
 export default function Layout({ children }) {
   // const [toggleMenu, setToggleMenu] = useState(false);
