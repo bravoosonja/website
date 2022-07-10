@@ -9,7 +9,9 @@ export default function ProjectLayout({ children }) {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.content}> {children}</div>
+        <div className={styles.content}>
+          <div className={styles.text}>{children}</div>
+        </div>
       </div>
     </div>
   );

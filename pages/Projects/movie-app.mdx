@@ -1,0 +1,47 @@
+import Layout from "../../components/layouts/Layout";
+import ProjectLayout from "../../components/layouts/ProjectLayout";
+import DemoImage from "../../components/UI/DemoImage";
+import DesktopDemo from "../../public/demo-images/movie-app-desktop.gif";
+import MobileDemo from "../../public/demo-images/movie-app-mobile.gif";
+
+export const meta = {
+  title: "Movie App",
+  date: "2022-05-25",
+  description:
+    "Fetching external API, this project displays popular movies and information along with search function.",
+  image: "/public/main-images/project2_l.png",
+};
+
+# Movie App
+<DemoImage src={DesktopDemo} width={1000} height={483} alt="dekstop demo"/>
+
+## Overview
+The objective of this project is to practice fetching data from an external API.
+
+
+## Skills used
+- React
+  - Fetch data from an external API
+  - Persist state in session storage to cache fetched data
+  - Create custom hooks
+- Styled Components
+  - Use GlobalStyle
+
+## Features
+- Display popular movies
+- Display movie information
+- Search for movies
+- Mobile responsive
+
+
+<DemoImage src={MobileDemo} width={347} height={753}/>
+
+## Lessons Learned
+1. Creating custom hooks & naming convention for custom hooks
+2. The use of PropTypes
+
+export default ({ children }) => (
+  <Layout meta={meta}>
+    <ProjectLayout>{children}</ProjectLayout>
+  </Layout>
+);

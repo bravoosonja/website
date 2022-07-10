@@ -1,5 +1,8 @@
 import Layout from "../../components/layouts/Layout";
 import ProjectLayout from "../../components/layouts/ProjectLayout";
+import DemoImage from "../../components/UI/DemoImage";
+// images
+import EtchDemo from "../../public/demo-images/etch-a-sketch.gif";
 
 export const meta = {
   title: "Etch A Sketch",
@@ -10,10 +13,11 @@ export const meta = {
 };
 
 # Etch A Sketch
-
+<DemoImage src={EtchDemo} width={1000} height={483} alt="dekstop demo"/>
 ## Overview
 
-Objective is to create a web-browser version of something between a sketchpad and an Etch-A-Sketch using Javascript DOM manipulation and CSS grid. This is my third project using Javascript.
+Objective is to create a web-browser version of something between a sketchpad and an Etch-A-Sketch using Javascript DOM manipulation and CSS grid. 
+This is my third project using Javascript.
 
 ## Skills used
 
@@ -32,7 +36,7 @@ Objective is to create a web-browser version of something between a sketchpad an
 ## Lessons Learned
 1. At first, the small pixel grid would flow over the container, and the large pixel grid would leave empty spaces inside the container. This was caused due to adding a fixed size on grid-template-columns: and grid-template-rows: on CSS for the container. Once I removed those from the CSS and added
 
-```js
+```javascript
 container.style.gridTemplateColumns = `repeat(${size},1fr)`;
 container.style.gridTemplateRows = `repeat(${size},1fr)`;
 ```

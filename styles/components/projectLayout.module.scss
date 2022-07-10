@@ -13,14 +13,18 @@
     padding: 5rem 3rem;
 
     .content {
-      width: 70%;
+      width: 80%;
       height: 100%;
       color: $dark-gray;
+      outline: 1px solid white;
+      padding: 5rem;
 
-      .demo {
+      .text {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        padding: 1rem;
       }
     }
   }

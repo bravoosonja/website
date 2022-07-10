@@ -19,7 +19,7 @@ import { projectItems } from "../../public/data";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Projects({ allProjectsData }) {
+export default function Projects() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -49,7 +49,7 @@ export default function Projects({ allProjectsData }) {
           {projectItems?.map((project) => (
             <div className={styles.content} id="content" key={project.id}>
               <div className={styles.image}>
-                <img
+                <Image
                   src={project.imagePath}
                   alt={project.name}
                   objectFit="cover"
