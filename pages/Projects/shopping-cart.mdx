@@ -1,0 +1,45 @@
+import Layout from "../../components/layouts/Layout";
+import ProjectLayout from "../../components/layouts/ProjectLayout";
+
+export const meta = {
+  title: "Shopping Cart",
+  date: "2022-06-18",
+  description:
+    "A web browser version of something between a sketchpad and an etch-a-sketch.",
+  image: "/public/mainImages/project1_l.png",
+};
+
+# Shopping Cart
+
+## Overview
+The objective of this project is to implement a shopping cart functionality using React Context API.
+
+## Skills used
+- React
+  - Context API
+- Styled components
+  - CSS Animation
+  - Global Style
+
+## Features
+- Mobile responsive
+- Add and remove items to the cart
+- View, update, close the cart modal
+- Show active states of the cart
+- Display the number of items in a cart on a badge
+
+## Lessons Learned
+- React
+  - Importing svgs to React
+  - Using react-responsive for media query
+  - Adding a modal via React Portal
+  
+- Styled Components
+  - Using attribute to style input number spinner
+  - Conditionally adding CSS classnames to styled components
+
+export default ({ children }) => (
+  <Layout meta={meta}>
+    <ProjectLayout>{children}</ProjectLayout>
+  </Layout>
+);

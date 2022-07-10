@@ -8,7 +8,9 @@ import Contact from "../../pages/contact";
 export default function ProjectLayout({ children }) {
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper}>{children}</div>
+      <div className={styles.wrapper}>
+        <div className={styles.content}> {children}</div>
+      </div>
     </div>
   );
 }

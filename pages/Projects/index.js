@@ -51,7 +51,7 @@ export default function Projects({ allProjectsData }) {
               <div className={styles.image}>
                 <img
                   src={project.imagePath}
-                  alt={project.title}
+                  alt={project.name}
                   objectFit="cover"
                   width={1920}
                   height={929}
@@ -79,7 +79,7 @@ export default function Projects({ allProjectsData }) {
                 </div>
                 <Link href={"/projects/" + project.id} key={project.id}>
                   <h4>
-                    <a key={project.id}>{project.title}</a>
+                    <a key={project.id}>{project.name}</a>
                   </h4>
                 </Link>
                 <p>{project.info}</p>
