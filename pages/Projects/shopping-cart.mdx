@@ -1,5 +1,14 @@
+import Image from "next/image";
 import Layout from "../../components/layouts/Layout";
 import ProjectLayout from "../../components/layouts/ProjectLayout";
+import MockupImage from "../../components/UI/MockupImage";
+// images
+import desktopDemo from "../../public/projectImages/shoppingCart/desktop-demo.gif";
+import mobileDemo from "../../public/projectImages/shoppingCart/mobile-demo.gif";
+import desktopMockup from "../../public/projectImages/shoppingCart/desktop-mockup.png";
+import mobileMockup from "../../public/projectImages/shoppingCart/mobile-mockup.png";
+// styles
+import styles from "../../styles/components/projectLayout.module.scss";
 
 export const meta = {
   title: "Shopping Cart",
@@ -10,6 +19,8 @@ export const meta = {
 };
 
 # Shopping Cart
+<Image className={styles.demo} src={desktopDemo} width={1000} height={483} alt="dekstop demo"/>
+
 
 ## Overview
 The objective of this project is to implement a shopping cart functionality using React Context API.
@@ -20,6 +31,7 @@ The objective of this project is to implement a shopping cart functionality usin
 - Styled components
   - CSS Animation
   - Global Style
+<MockupImage src={desktopMockup} width={736} height={356} alt="dekstop mockup"/>
 
 ## Features
 - Mobile responsive
@@ -27,7 +39,7 @@ The objective of this project is to implement a shopping cart functionality usin
 - View, update, close the cart modal
 - Show active states of the cart
 - Display the number of items in a cart on a badge
-
+<MockupImage src={mobileMockup} width={410} height={287}/>
 ## Lessons Learned
 - React
   - Importing svgs to React
