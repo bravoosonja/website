@@ -1,3 +1,6 @@
+import Layout from "../../components/layouts/Layout";
+import ProjectLayout from "../../components/layouts/ProjectLayout";
+
 export default function shoppingCart() {
   return (
     <div>
@@ -6,3 +9,11 @@ export default function shoppingCart() {
     </div>
   );
 }
+
+shoppingCart.getLayout = function getLayout(shoppingCart) {
+  return (
+    <Layout>
+      <ProjectLayout>{shoppingCart}</ProjectLayout>
+    </Layout>
+  );
+};
