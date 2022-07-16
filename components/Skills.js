@@ -15,7 +15,6 @@ export default function Skills() {
         {skillsItems.map((skill) => (
           <div className={styles.column} key={skill.id}>
             <ul>{skill.title}</ul>
-
             <li key={skill.index}>{skill.contents}</li>
           </div>
         ))}
