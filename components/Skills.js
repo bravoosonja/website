@@ -7,20 +7,18 @@ import { skillsItems } from "../public/data";
 
 export default function Skills() {
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.title}>
-          <AnimatedTitle textToAnimate={"Skills"} />
-        </div>
-        <div className={styles.content}>
-          {skillsItems.map((skill) => (
-            <div className={styles.column} key={skill.id}>
-              <ul>{skill.title}</ul>
+    <div className={styles.wrapper}>
+      <div className={styles.title}>
+        <AnimatedTitle textToAnimate={"Skills"} />
+      </div>
+      <div className={styles.content}>
+        {skillsItems.map((skill) => (
+          <div className={styles.column} key={skill.id}>
+            <ul>{skill.title}</ul>
 
-              <li key={skill.index}>{skill.contents}</li>
-            </div>
-          ))}
-        </div>
+            <li key={skill.index}>{skill.contents}</li>
+          </div>
+        ))}
       </div>
     </div>
   );

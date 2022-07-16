@@ -1,116 +1,107 @@
 @import "../variables.module.scss";
 
-.container {
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 3rem;
   height: 100vh;
   width: 100vw;
+  line-height: 1;
   background-color: $contact-background;
 
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: auto;
+  .left {
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem 3rem;
-    height: 100%;
-    width: 100%;
-    line-height: 1;
+    flex-direction: column;
 
-    .left {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+    .title {
+      z-index: 5;
+      width: min-content;
+      margin: 0;
 
-      .title {
-        z-index: 5;
-        width: min-content;
-        margin: 0;
-
-        h1 {
-          color: $dark-text;
-          font-size: 6rem;
-        }
-      }
-
-      .icons {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 15%;
-
-        button {
-          font-size: 2rem;
-          margin-top: 5vh;
-          background: none;
-        }
+      h1 {
+        color: $dark-text;
+        font-size: 6rem;
       }
     }
 
-    .right {
+    .icons {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: $dark-gray;
-      width: 20vw;
-      overflow-wrap: break-word;
-      line-height: 1;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 15%;
 
-      .text {
-        width: 100%;
-        p {
-          font-size: 1.3rem;
+      button {
+        font-size: 2rem;
+        margin-top: 5vh;
+        background: none;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $dark-gray;
+    width: 20vw;
+    overflow-wrap: break-word;
+    line-height: 1;
+
+    .text {
+      width: 100%;
+      p {
+        font-size: 1.3rem;
+        color: gray;
+      }
+
+      .email {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-top: 1rem;
+
+        button {
+          line-height: 1;
+          background: none;
           color: gray;
-        }
+          font-family: "Mier";
+          font-size: 2.5rem;
 
-        .email {
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          flex-direction: column;
-          padding-top: 1rem;
+          .underline {
+            background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 88%;
+            transition: background-size 0.2s ease-in;
 
-          button {
-            line-height: 1;
-            background: none;
-            color: gray;
-            font-family: "Mier";
-            font-size: 2.5rem;
-
-            .underline {
-              background-image: linear-gradient(
-                -20deg,
-                #e9defa 0%,
-                #fbfcdb 100%
-              );
-              background-repeat: no-repeat;
-              background-size: 100% 0.2em;
-              background-position: 0 88%;
-              transition: background-size 0.2s ease-in;
-
-              &:hover {
-                background-size: 100% 88%;
-              }
+            &:hover {
+              background-size: 100% 88%;
             }
+          }
 
-            .copyText {
-              position: relative;
-              top: 1vh;
-              color: black;
-              padding: 1rem;
-              font-size: 1rem;
+          .copyText {
+            position: relative;
+            top: 1vh;
+            color: black;
+            padding: 1rem;
+            font-size: 1rem;
 
-              &:hover {
-                opacity: 1;
-                top: -30px;
-                left: 0;
-                width: 100%;
-                height: 275%;
+            &:hover {
+              opacity: 1;
+              top: -30px;
+              left: 0;
+              width: 100%;
+              height: 275%;
 
-                &::after {
-                  content: "Copied!";
-                }
+              &::after {
+                content: "Copied!";
               }
             }
           }

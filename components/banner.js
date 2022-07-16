@@ -41,19 +41,6 @@ export default function Banner() {
         >
           <span>user experience</span>
         </motion.div>
-
-        {/* <motion.div
-          className={styles.scrollDown}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            ease: [0.2, 0.65, 0.3, 0.9],
-            duration: 1.3,
-            delay: 2,
-          }}
-        >
-          <span>Scroll down</span>
-        </motion.div> */}
       </div>
     </div>
   );

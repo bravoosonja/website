@@ -1,33 +1,26 @@
 @import "../variables.module.scss";
 
-.container {
-  width: 100%;
-  height: 100%;
-  padding: 5rem 2rem;
-  background-color: $main-background;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    .title {
-      h1 {
-        color: white;
-        font-size: 6rem;
-      }
+  .title {
+    h1 {
+      color: white;
+      font-size: 6rem;
     }
+  }
 
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $dark-gray;
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-gray;
 
-      .text {
-        width: 50%;
-      }
+    .text {
+      width: 50%;
     }
   }
 }

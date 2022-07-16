@@ -39,70 +39,68 @@ export default function Contact() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.left}>
-          <div className={styles.title}>
-            <AnimatedTitle textToAnimate={"Contact"} />
-          </div>
-          <div className={styles.icons}>
-            <IconContext.Provider value={{ color: "white" }}>
-              <button>
-                <a
-                  target="_blank"
-                  href="https://github.com/bravoosonja"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub className={styles.github} />
-                </a>
-              </button>
-              <button>
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/songna-c"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin className={styles.linkedin} />
-                </a>
-              </button>
-            </IconContext.Provider>
-          </div>
+    <div className={styles.wrapper}>
+      <div className={styles.left}>
+        <div className={styles.title}>
+          <AnimatedTitle textToAnimate={"Contact"} />
         </div>
-        <div className={styles.right}>
-          <div className={styles.text}>
-            <p>
-              Feel free to reach out for collaboration opportunities or simply
-              for a chat!
-            </p>
-            <div className={styles.email}>
-              <button
-                onClick={() => {
-                  copyToClipboard();
+        <div className={styles.icons}>
+          <IconContext.Provider value={{ color: "white" }}>
+            <button>
+              <a
+                target="_blank"
+                href="https://github.com/bravoosonja"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className={styles.github} />
+              </a>
+            </button>
+            <button>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/songna-c"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className={styles.linkedin} />
+              </a>
+            </button>
+          </IconContext.Provider>
+        </div>
+      </div>
+      <div className={styles.right}>
+        <div className={styles.text}>
+          <p>
+            Feel free to reach out for collaboration opportunities or simply for
+            a chat!
+          </p>
+          <div className={styles.email}>
+            <button
+              onClick={() => {
+                copyToClipboard();
+              }}
+            >
+              <motion.span
+                className={styles.underline}
+                onMouseOver={() => setIsHovered(true)}
+                onMouseOut={() => setIsHovered(false)}
+              >
+                songnachoi@gmail.com
+              </motion.span>
+              <motion.div
+                className={styles.copyText}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{
+                  opacity: isHovered ? "1" : "0",
+                  x: isHovered ? "0" : "50",
+                }}
+                transition={{
+                  duration: isHovered ? "0.7" : "0.7",
+                  ease: [0.2, 0.65, 0.3, 0.9],
                 }}
               >
-                <motion.span
-                  className={styles.underline}
-                  onMouseOver={() => setIsHovered(true)}
-                  onMouseOut={() => setIsHovered(false)}
-                >
-                  songnachoi@gmail.com
-                </motion.span>
-                <motion.div
-                  className={styles.copyText}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{
-                    opacity: isHovered ? "1" : "0",
-                    x: isHovered ? "0" : "50",
-                  }}
-                  transition={{
-                    duration: isHovered ? "0.7" : "0.7",
-                    ease: [0.2, 0.65, 0.3, 0.9],
-                  }}
-                >
-                  Click to copy to clipboard
-                </motion.div>
-              </button>
-            </div>
+                Click to copy to clipboard
+              </motion.div>
+            </button>
           </div>
         </div>
       </div>

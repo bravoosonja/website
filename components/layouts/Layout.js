@@ -7,23 +7,21 @@ import CursorContextProvider, {
 import Menu from "../Menu";
 import CustomCursor from "../feature/CustomCursor";
 import Contact from "../../pages/contact";
+import styles from "../../styles/components/layout.module.scss";
 
 export default function Layout({ children }) {
-  // const [toggleMenu, setToggleMenu] = useState(false);
   const { cursorType, cursorChangeHandler } = useContext(CursorContext);
 
   return (
-    <>
+    <div className={styles.container}>
       <CustomCursor />
       <nav>
-        {/* <Menu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
-
         <Menu />
       </nav>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
       <footer>
         <Contact />
       </footer>
-    </>
+    </div>
   );
 }

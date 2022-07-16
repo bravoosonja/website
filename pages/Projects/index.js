@@ -61,18 +61,10 @@ export default function Projects() {
               <div className={styles.text}>
                 <div className={styles.icons}>
                   <IconContext.Provider value={{ color: "white" }}>
-                    <a
-                      target="_blank"
-                      href={project.github}
-                      rel="noopener noreferrer"
-                    >
+                    <a target="_blank" href={project.github}>
                       <FaGithub />
                     </a>
-                    <a
-                      target="_blank"
-                      href={project.live}
-                      rel="noopener noreferrer"
-                    >
+                    <a target="_blank" href={project.live}>
                       <RiExternalLinkLine />
                     </a>
                   </IconContext.Provider>
@@ -84,7 +76,7 @@ export default function Projects() {
                 </Link>
                 <p>{project.info}</p>
                 <div className={styles.skills}>
-                  {project?.techStack?.map((skill, index) => (
+                  {project?.techStack?.map((skill) => (
                     <div className={styles.skill} key={index}>
                       <h5>{skill}</h5>
                     </div>

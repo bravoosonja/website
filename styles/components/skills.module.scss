@@ -1,58 +1,60 @@
 @import "../variables.module.scss";
 
-.container {
-  width: 100%;
-  height: 100%;
-  background-color: $main-background;
+.wrapper {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  // padding: 5rem 2rem;
 
-  .wrapper {
-    display: flex;
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    h1 {
+      color: white;
+      font-size: 6rem;
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: auto;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 5rem 2rem;
+    grid-gap: 1.5rem;
+    text-align: center;
+    width: 95%;
 
-    .title {
-      h1 {
-        color: white;
-        font-size: 6rem;
-      }
-    }
+    .column {
+      height: 300px;
+      padding: 1rem;
+      background-color: $dark-blur;
 
-    .content {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-row: auto;
-      justify-content: center;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
-      grid-gap: 1.5rem;
-      text-align: center;
-      width: 95%;
 
-      .column {
-        height: 300px;
-        padding: 1rem;
-        background-color: $dark-blur;
+      ul {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $gray;
+      }
 
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-
-        ul {
-          margin-top: 1rem;
-          font-size: 1.5rem;
-          text-transform: uppercase;
-          font-weight: 600;
-          color: $gray;
-        }
-
-        li {
-          list-style: none;
-          font-size: 1.2rem;
-          color: $dark-gray;
-        }
+      li {
+        list-style: none;
+        font-size: 1.2rem;
+        color: $dark-gray;
       }
     }
   }
