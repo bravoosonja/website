@@ -18,6 +18,7 @@ body {
   scroll-behavior: smooth;
   cursor: none;
   font-family: "Mier", "Armouk", sans-serif;
+  overflow-x: hidden;
 }
 
 *,
@@ -105,6 +106,20 @@ button {
   touch-action: manipulation;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 48%, 0.308);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 33%, 0.288);
+}
+
 .container {
   padding: 0 2rem;
   margin: 0 auto;
@@ -122,6 +137,8 @@ button {
 
 .not-found {
   a {
+    color: inherit;
     text-decoration: underline;
+    font-size: inherit;
   }
 }

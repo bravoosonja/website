@@ -9,7 +9,7 @@ export default function NotFound() {
       <p>
         Go back to{" "}
         <Link href="/">
-          <a>Home</a>
+          <a>Homepage</a>
         </Link>
       </p>
     </div>
